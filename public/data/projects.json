@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "zero-trust-dashboard",
+    "title": "Zero Trust Identity Dashboard",
+    "description": "Full-stack identity verification system implementing Zero Trust architecture with JWT authentication, role-based access control, contextual policy evaluation, and persistent audit logging.",
+    "category": "security",
+    "tags": ["Zero Trust", "JWT", "RBAC", "Node.js", "SQLite", "Next.js"],
+    "github": "https://github.com/GiorgosNicolaides/zero-trust-dashboard",
+    "demo": null,
+    "featured": true,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "threat-detection-engine",
+    "title": "AI-Powered Threat Detection Engine",
+    "description": "Machine learning anomaly detection engine that ingests Apache error logs and OpenSSH auth logs, extracts behavioral features, and surfaces alerts with human-readable reasons using an Isolation Forest model.",
+    "category": "security",
+    "tags": ["Python", "FastAPI", "scikit-learn", "IsolationForest", "Log Analysis"],
+    "github": "https://github.com/GiorgosNicolaides/threat-detection-engine",
+    "demo": null,
+    "featured": true,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "devsecops-scanner",
+    "title": "DevSecOps Pipeline Scanner",
+    "description": "Multi-language dependency vulnerability scanner and secret detector. Queries OSV.dev for CVEs across PyPI, npm, Go, and Rust ecosystems. Integrates with GitHub Actions for automated CI/CD security gating.",
+    "category": "security",
+    "tags": ["Python", "FastAPI", "OSV.dev", "GitHub Actions", "Secret Detection"],
+    "github": "https://github.com/GiorgosNicolaides/devsecops-scanner",
+    "demo": null,
+    "featured": true,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "cloud-auditor",
+    "title": "Cloud Misconfiguration Auditor",
+    "description": "Audits AWS resources against CIS Benchmark rules using LocalStack. Checks S3, IAM, and Security Groups for misconfigurations including open buckets, weak password policies, and unrestricted inbound traffic.",
+    "category": "security",
+    "tags": ["Python", "Boto3", "LocalStack", "CIS Benchmarks", "AWS", "FastAPI"],
+    "github": "https://github.com/GiorgosNicolaides/cloud-auditor",
+    "demo": null,
+    "featured": false,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "ir-simulator",
+    "title": "Incident Response Runbook Simulator",
+    "description": "Decision-based incident response training tool with phishing and ransomware scenarios mapped to MITRE ATT&CK techniques. Scores analyst decisions and generates graded post-incident reports.",
+    "category": "security",
+    "tags": ["Python", "FastAPI", "MITRE ATT&CK", "Incident Response", "State Machine"],
+    "github": "https://github.com/GiorgosNicolaides/ir-simulator",
+    "demo": null,
+    "featured": false,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "covsaw",
+    "title": "COVSAW — Static Analysis Tool",
+    "description": "Custom static analysis tool for automated Python security verification, built as part of undergraduate thesis research. Benchmarked against Semgrep and Bandit on a 200-file corpus. Accompanied by SafeCrypto, an interactive web platform for CWE-based secure coding education.",
+    "category": "research-tool",
+    "tags": ["Python", "Static Analysis", "CWE", "Security Verification", "Bandit", "Semgrep"],
+    "github": "https://github.com/GiorgosNicolaides/COVSAW",
+    "demo": null,
+    "featured": false,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "agri-coop",
+    "title": "Agri-Coop",
+    "description": "Cooperative agricultural management platform built in Java. Covers resource allocation, member management, and cooperative operations. Demonstrates object-oriented design and full application architecture.",
+    "category": "cs",
+    "tags": ["Java", "OOP", "Application Design"],
+    "github": "https://github.com/GiorgosNicolaides/agri-coop",
+    "demo": null,
+    "featured": false,
+    "private": false,
+    "type": "project"
+  },
+  {
+    "slug": "leo-auth-protocol",
+    "title": "LEO Satellite IoT Authentication Protocol",
+    "description": "High-performance authentication framework for LEO satellite-to-ground communication. Optimised C-based protocol logic achieving a 1,807x improvement in key generation speed over RSA-2048. Validated using a containerised Docker-based testbed.",
+    "category": "research",
+    "tags": ["C", "Cryptography", "LEO Satellites", "IoT Security", "Docker", "Authentication"],
+    "github": null,
+    "demo": null,
+    "featured": true,
+    "private": true,
+    "type": "research",
+    "research_type": "Research Paper",
+    "institution": "University of Limerick",
+    "year": "2026",
+    "status": "pending_submission",
+    "author_position": "First Author",
+    "stat": "1,807x faster than RSA-2048",
+    "code_available": "upon_request",
+    "highlights": [
+      "1,807x improvement in key generation speed vs RSA-2048",
+      "Mutual authentication with replay and tamper resistance",
+      "Docker-based testbed for validation",
+      "Optimised for constrained satellite endpoints"
+    ]
+  }
+]

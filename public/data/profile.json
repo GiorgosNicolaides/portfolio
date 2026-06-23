@@ -1,0 +1,148 @@
+{
+  "name": "Georgios Nicolaides",
+  "title": "Cybersecurity Engineer",
+  "email": "gnicolaides02@gmail.com",
+  "phone": "+357 95700500",
+  "location": "Nicosia, Cyprus",
+  "github": "https://github.com/GiorgosNicolaides",
+  "linkedin": "https://www.linkedin.com/in/giorgosnicolaides/",
+  "tryhackme": {
+    "username": "georgenic",
+    "badge_url": "https://tryhackme-badges.s3.amazonaws.com/georgenic.png",
+    "profile_url": "https://tryhackme.com/p/georgenic"
+  },
+  "personal_statement": "Security is not a feature you bolt on at the end, it is a discipline you build into every decision from the start. I am an MEng Cybersecurity engineer with a background in informatics and telematics, with particular interest in protocol security, cryptographic implementation, and defensive tooling. I have engineered lightweight authentication protocols for passive RFID/NFC hardware, co-authored a pending research paper achieving a 1,807x improvement in LEO satellite key generation speed, and built a portfolio of real-world security tools spanning zero trust identity, AI-powered threat detection, DevSecOps pipelines, and cloud misconfiguration auditing. I have led developer communities, mentored 30+ students through competitive cybersecurity environments, and delivered monthly workshops on offensive and defensive topics.",
+  "education": [
+    {
+      "institution": "University of Limerick",
+      "country": "Ireland",
+      "degree": "Master of Engineering Cybersecurity",
+      "start": "Sep 2025",
+      "end": "Aug 2026",
+      "current": true,
+      "thesis": "Securing RFID/NFC Technologies in Resource-Constrained IoT Environments"
+    },
+    {
+      "institution": "Harokopio University",
+      "country": "Greece",
+      "degree": "Bachelor of Science Informatics & Telematics",
+      "start": "Oct 2021",
+      "end": "Jul 2025",
+      "current": false,
+      "thesis": "Categorization of Cryptographic Vulnerabilities & Web Security Assessment",
+      "grade": "10/10"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA Security+",
+      "issuer": "CompTIA",
+      "status": "in_progress",
+      "expected": "Jul 2026",
+      "badge_url": null
+    }
+  ],
+  "research": [
+    {
+      "title": "Securing RFID/NFC Technologies in Resource-Constrained IoT Environments",
+      "type": "MEng Thesis",
+      "institution": "University of Limerick",
+      "year": "2026",
+      "status": "in_progress",
+      "code_available": "upon_request",
+      "repo": null,
+      "description": "Engineered SONDA-MA, a lightweight mutual authentication protocol for passive RFID/NFC hardware. Built a prototype using Raspberry Pi 5, MFRC522/PN532 modules, and validated with adversarial testing using a Flipper Zero. Achieved verifiable replay protection and dynamic session management within Class 1 IoT hardware constraints.",
+      "highlights": [
+        "Designed SONDA-MA lightweight mutual authentication protocol",
+        "Prototype built with Raspberry Pi 5 and MFRC522/PN532 modules",
+        "Adversarial testing with Flipper Zero",
+        "Replay protection within Class 1 IoT hardware constraints"
+      ]
+    },
+    {
+      "title": "LEO Satellite IoT Authentication Protocol",
+      "type": "Research Paper",
+      "institution": "University of Limerick",
+      "year": "2026",
+      "status": "pending_submission",
+      "author_position": "First Author",
+      "stat": "1,807x faster than RSA-2048",
+      "code_available": "upon_request",
+      "repo": null,
+      "description": "Architected a high-performance authentication framework for LEO satellite-to-ground communication. Optimised C-based protocol logic achieving a 1,807x improvement in key generation speed over RSA-2048. Validated using a containerised Docker-based testbed.",
+      "highlights": [
+        "1,807x improvement in key generation speed vs RSA-2048",
+        "Mutual authentication with replay and tamper resistance",
+        "Docker-based testbed for validation",
+        "Optimised for constrained satellite endpoints"
+      ]
+    },
+    {
+      "title": "Categorization of Cryptographic Vulnerabilities & Web Security Assessment",
+      "type": "Undergraduate Thesis",
+      "institution": "Harokopio University",
+      "year": "2025",
+      "status": "completed",
+      "grade": "10/10",
+      "code_available": "public",
+      "repo": "https://github.com/GiorgosNicolaides/COVSAW",
+      "description": "Built Covsaw, a custom static analysis tool for automated Python security verification. Benchmarked against Semgrep and Bandit using 200 Python files. Also developed SafeCrypto, an interactive web platform with CWE-based documentation for secure coding practices.",
+      "highlights": [
+        "Built Covsaw static analysis tool for Python security verification",
+        "Benchmarked against Semgrep and Bandit on 200-file corpus",
+        "Developed SafeCrypto interactive web platform",
+        "CWE-based documentation for secure coding practices"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organisation": "Google Developer Group (GDG)",
+      "chapter": "Harokopio University Sub-chapter",
+      "role": "Co-Lead",
+      "start": "Sep 2024",
+      "end": "Jul 2025",
+      "highlights": [
+        "Revived a dormant developer community, growing active membership from 5 to 50",
+        "Delivered monthly cybersecurity workshops covering SQL Injection, network enumeration, privilege escalation, and OSINT",
+        "Mentored 6 teams (30+ participants) through Hellenic University Hack — all secured top-20 finishes",
+        "Secured partnership with NKUA GDG to preserve the community through institutional restructuring"
+      ]
+    },
+    {
+      "organisation": "Google Developer Student Clubs (GDSC)",
+      "chapter": "Harokopio University",
+      "role": "Core Team Member — Developer",
+      "start": "Sep 2023",
+      "end": "Jul 2024",
+      "highlights": [
+        "Built and maintained technical resources for the club",
+        "Contributed to workshops and events as part of the developer track"
+      ]
+    }
+  ],
+  "skills": {
+    "Security Engineering": [
+      "Secure SDLC", "Static Code Analysis", "Cryptographic Implementation",
+      "AES", "RSA", "Merkle Schemes", "Zero Trust", "IAM", "RBAC"
+    ],
+    "Defensive Security": [
+      "Log Analysis", "SIEM (ELK Stack, Splunk)", "Incident Response",
+      "Threat Detection", "Firewall/ACL Management", "CIS Benchmarks",
+      "MITRE ATT&CK", "NIST CSF", "GDPR"
+    ],
+    "Offensive Security": [
+      "Vulnerability Assessment", "Network Enumeration",
+      "Nmap", "Wireshark", "Burp Suite", "OSINT", "Privilege Escalation"
+    ],
+    "IoT & Hardware": [
+      "RFID/NFC (MIFARE)", "Raspberry Pi", "Flipper Zero",
+      "MFRC522/PN532", "Adversarial Testing", "IoT Security"
+    ],
+    "Programming": ["C", "C++", "Java", "JavaScript", "Python", "Bash"],
+    "Infrastructure": [
+      "Docker", "Kubernetes", "Ansible", "LocalStack",
+      "GitHub Actions", "Linux/Unix Hardening"
+    ]
+  }
+}

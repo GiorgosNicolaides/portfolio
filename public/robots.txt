@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://georgiosnicolaides.vercel.app/sitemap.xml
