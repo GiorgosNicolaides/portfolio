@@ -48,8 +48,8 @@ export default function Hero() {
               <span className="text-accent">Nicolaides</span>
             </h1>
             <p className="text-text-muted mb-8 max-w-md leading-relaxed">
-              Building defensive security tools, researching lightweight cryptographic protocols,
-              and bridging the gap between theory and real-world threat response.
+              Building defensive security tools, researching lightweight cryptographic
+              protocols, and bridging the gap between theory and real-world threat response.
             </p>
 
             <Terminal title="gn@portfolio:~$" className="mb-8">
@@ -85,45 +85,103 @@ export default function Hero() {
               >
                 View Research
               </Link>
-              
               <Link
                 href="mailto:gnicolaides02@gmail.com"
                 className="px-6 py-3 border border-border-subtle text-text-muted font-mono text-sm rounded hover:border-accent hover:text-accent transition-colors"
-               >
+              >
                 Contact Me
-
-               </Link>
-
+              </Link>
               <DownloadCV />
             </div>
           </div>
 
-          {/* Right — Stats grid */}
-          <div className="hidden lg:grid grid-cols-2 gap-4 animate-fadeIn">
-            {[
-              { label: 'Security Projects', value: '5', sub: 'built & deployed' },
-              { label: 'Research Papers', value: '2', sub: 'in progress' },
-              { label: 'Speed Improvement', value: '1,807x', sub: 'vs RSA-2048' },
-              { label: 'Students Mentored', value: '30+', sub: 'GDG community' },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="bg-panel border border-border-subtle rounded-lg p-6 hover:border-accent/50 transition-colors"
-              >
-                <div className="text-3xl font-bold text-accent font-mono mb-1">
-                  {stat.value}
+          {/* Right — Highlight grid */}
+          <div className="hidden lg:flex flex-col gap-4 animate-fadeIn">
+
+            {/* Hero stat */}
+            <div className="bg-panel border border-accent/30 rounded-lg p-8 hover:border-accent/60 transition-colors">
+              <div className="text-5xl font-bold text-accent font-mono mb-3">
+                1,807x
+              </div>
+              <div className="text-text-primary text-sm font-medium mb-2">
+                faster mutual authentication for LEO satellites
+              </div>
+              <div className="text-text-muted text-xs font-mono leading-relaxed">
+                Designed an ECDSA P-256 authentication protocol for LEO satellite
+                to ground station communication — achieving 1,807x faster key generation
+                than RSA-2048 while maintaining equivalent security.
+                Validated in a containerised testbed.
+              </div>
+              <div className="mt-4 pt-4 border-t border-border-subtle flex items-center justify-between">
+                <span className="text-text-muted text-xs font-mono">
+                  First Author · Pending Submission · 2026
+                </span>
+                <span className="text-xs font-mono px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20">
+                  Research Paper
+                </span>
+              </div>
+            </div>
+
+            {/* Two skill cards */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-panel border border-border-subtle rounded-lg p-5 hover:border-accent/50 transition-colors">
+                <div className="text-accent font-mono text-xs mb-3">
+                  {'// cryptography'}
                 </div>
-                <div className="text-text-primary text-sm font-medium mb-1">
-                  {stat.label}
+                <div className="text-text-primary text-sm font-medium mb-3">
+                  Protocol Security & Research
                 </div>
-                <div className="text-text-muted text-xs font-mono">
-                  {stat.sub}
+                <div className="flex flex-wrap gap-1.5">
+                  {['SONDA-MA', 'LEO Satellite', 'RFID/NFC', 'AES', 'RSA', 'Merkle Trees'].map(tag => (
+                    <span
+                      key={tag}
+                      className="text-xs font-mono px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
+
+              <div className="bg-panel border border-border-subtle rounded-lg p-5 hover:border-accent/50 transition-colors">
+                <div className="text-accent font-mono text-xs mb-3">
+                  {'// defensive tooling'}
+                </div>
+                <div className="text-text-primary text-sm font-medium mb-3">
+                  Security Engineering
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {['Zero Trust', 'Threat Detection', 'DevSecOps', 'Cloud Auditing', 'SIEM', 'MITRE ATT&CK'].map(tag => (
+                    <span
+                      key={tag}
+                      className="text-xs font-mono px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Currently section */}
+            <div className="bg-panel border border-border-subtle rounded-lg p-5 hover:border-accent/50 transition-colors">
+              <div className="text-text-muted text-xs font-mono mb-3">{'// currently'}</div>
+              <div className="space-y-2.5">
+                {[
+                  { icon: '🎓', text: 'MEng Cybersecurity — University of Limerick' },
+                  { icon: '📄', text: 'CompTIA Security+ — expected Jul 2026' },
+                  { icon: '✅', text: 'Open to graduate & junior security roles' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-sm">{item.icon}</span>
+                    <span className="text-text-primary text-xs font-mono">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Location + availability */}
-            <div className="col-span-2 bg-panel border border-border-subtle rounded-lg p-6 hover:border-accent/50 transition-colors">
+            <div className="bg-panel border border-border-subtle rounded-lg px-5 py-4 hover:border-accent/50 transition-colors">
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-text-muted text-xs font-mono mb-1">{'// location'}</div>
@@ -138,10 +196,11 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
           </div>
 
         </div>
-        </div>
+      </div>
     </section>
   )
 }
