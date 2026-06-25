@@ -107,5 +107,25 @@
       "Docker-based testbed for validation",
       "Optimised for constrained satellite endpoints"
     ]
+  },
+  {
+  "slug": "malware-detection-scanner",
+  "title": "Windows Malware Detection Scanner",
+  "description": "Blue team cybersecurity tool that scans a Windows machine for malware indicators — suspicious processes, network connections, startup persistence, and malicious files. Integrates with VirusTotal (70+ AV engines) and the live abuse.ch malicious IP blocklist. Generates a colour-coded HTML report sorted by severity. Packaged as a standalone .exe with no Python install required.",
+  "category": "security",
+  "tags": ["Python", "VirusTotal API", "abuse.ch", "Malware Analysis", "Blue Team", "tkinter", "PyInstaller", "Windows Security"],
+  "github": "https://github.com/GiorgosNicolaides/malware_detection_scanner",
+  "demo": null,
+  "featured": false,
+  "private": false,
+  "type": "project",
+  "highlights": [
+    "Scans running processes for injection, suspicious paths, and malicious strings",
+    "Flags outbound connections against live abuse.ch malicious IP blocklist",
+    "Audits 6 Windows registry run keys and startup folders for persistence",
+    "Hashes suspicious files and checks against 70+ AV engines via VirusTotal API",
+    "Generates colour-coded HTML report (HIGH / MEDIUM / LOW / INFO)",
+    "Packaged as standalone Windows .exe — no Python install needed on target"
+  ]
   }
 ]
