@@ -3,29 +3,46 @@ import Link from 'next/link'
 import { certifications, profile, timeline } from '@/data/profile'
 import { projects } from '@/data/projects'
 import SectionHeader from '@/components/ui/SectionHeader'
-import { ArrowRightIcon, CapIcon, ShieldIcon, UsersIcon, BookIcon } from '@/components/ui/Icons'
+import { ArrowRightIcon, BookIcon, BriefcaseIcon, CapIcon, ShieldIcon, UsersIcon } from '@/components/ui/Icons'
+import { cn } from '@/lib/utils'
 
 const research = projects.filter(p => p.category === 'research')
+
+const kindIcons = {
+  work: BriefcaseIcon,
+  education: CapIcon,
+  leadership: UsersIcon,
+}
 
 export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
       <SectionHeader
         eyebrow="Background"
-        title="Education, leadership & research"
-        subtitle="A strong academic base, combined with running a community and teaching security hands-on."
+        title="Experience, education & certifications"
+        subtitle="Hands-on IT operations, a cybersecurity master's degree, vendor certifications, and experience leading a developer community."
       />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr]">
         <ol className="relative space-y-8 border-l border-border-subtle pl-8">
           {timeline.map(item => {
-            const Icon = item.kind === 'education' ? CapIcon : UsersIcon
+            const Icon = kindIcons[item.kind]
             return (
               <li key={item.title + item.org} className="relative">
-                <span className="absolute -left-[45px] grid h-7 w-7 place-items-center rounded-full border border-border-subtle bg-panel text-accent">
+                <span
+                  className={cn(
+                    'absolute -left-[45px] grid h-7 w-7 place-items-center rounded-full border bg-panel text-accent',
+                    item.current ? 'border-accent/60 shadow-[0_0_0_4px_rgba(52,211,153,0.12)]' : 'border-border-subtle'
+                  )}
+                >
                   <Icon size={14} />
                 </span>
-                <div className="font-mono text-xs text-text-muted">{item.period}</div>
+                <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-text-muted">
+                  {item.period}
+                  {item.current && (
+                    <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] text-accent">Current</span>
+                  )}
+                </div>
                 <h3 className="mt-1 font-semibold text-text-primary">{item.title}</h3>
                 <div className="text-sm text-accent">
                   {item.org} <span className="text-text-muted">· {item.place}</span>
@@ -44,24 +61,9 @@ export default function Experience() {
         </ol>
 
         <div className="space-y-5">
-          <div className="card p-6">
+          <div id="certifications" className="card p-6">
             <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
-              <BookIcon size={16} className="text-accent" /> Research
-            </div>
-            <div className="space-y-4">
-              {research.map(r => (
-                <Link key={r.slug} href={`/projects/${r.slug}`} className="group block rounded-lg border border-border-subtle bg-background/50 p-4 transition-colors hover:border-accent/40">
-                  <div className="font-mono text-2xl font-bold text-accent">{r.metrics[0].value}</div>
-                  <div className="text-[11px] text-text-muted">{r.metrics[0].label}</div>
-                  <div className="mt-2 text-sm font-medium text-text-primary group-hover:text-accent">{r.title}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="card p-6">
-            <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
-              <ShieldIcon size={16} className="text-accent" /> Hands-on practice
+              <ShieldIcon size={16} className="text-accent" /> Certifications
             </div>
             <ul className="space-y-3">
               {certifications.map(c => (
@@ -78,17 +80,42 @@ export default function Experience() {
                     </div>
                     <div className="text-xs text-text-muted">{c.issuer}</div>
                   </div>
-                  <span className="shrink-0 rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
-                    {c.status}
-                  </span>
+                  {c.year && (
+                    <span className="shrink-0 rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
+                      {c.year}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="card p-6">
+            <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
+              <BookIcon size={16} className="text-accent" /> Research
+            </div>
+            <div className="space-y-4">
+              {research.map(r => (
+                <Link
+                  key={r.slug}
+                  href={`/projects/${r.slug}`}
+                  className="group block rounded-lg border border-border-subtle bg-background/50 p-4 transition-colors hover:border-accent/40"
+                >
+                  <div className="font-mono text-2xl font-bold text-accent">{r.metrics[0].value}</div>
+                  <div className="text-[11px] text-text-muted">{r.metrics[0].label}</div>
+                  <div className="mt-2 text-sm font-medium text-text-primary group-hover:text-accent">{r.title}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="card p-6">
+            <div className="mb-4 text-sm font-semibold text-text-primary">Hands-on practice</div>
             <a
               href={profile.tryhackme.profile_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 block overflow-hidden rounded-lg border border-border-subtle"
+              className="block overflow-hidden rounded-lg border border-border-subtle"
             >
               <Image
                 src={profile.tryhackme.badge_url}

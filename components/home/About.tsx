@@ -1,12 +1,14 @@
 import { pillars, profile, stats } from '@/data/profile'
 import SectionHeader from '@/components/ui/SectionHeader'
-import { CloudIcon, LockIcon, PipelineIcon, RadarIcon } from '@/components/ui/Icons'
+import { CloudIcon, HeadsetIcon, LockIcon, PipelineIcon, RadarIcon, SparkIcon } from '@/components/ui/Icons'
 
 const icons = {
   pipeline: PipelineIcon,
   cloud: CloudIcon,
   radar: RadarIcon,
   lock: LockIcon,
+  spark: SparkIcon,
+  desk: HeadsetIcon,
 }
 
 export default function About() {
@@ -21,41 +23,63 @@ export default function About() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.4fr]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <SectionHeader eyebrow="About" title="Operations mindset, attacker's eye" className="mb-6" />
           <p className="leading-relaxed text-text-muted">{profile.summary}</p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {profile.targetRoles.map(r => (
-              <span key={r} className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-                {r}
-              </span>
-            ))}
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {pillars.map(p => {
-            const Icon = icons[p.icon]
-            return (
-              <div key={p.title} className="card card-hover p-5">
-                <div className="mb-3 grid h-10 w-10 place-items-center rounded-lg bg-accent/10 text-accent">
-                  <Icon size={20} />
-                </div>
-                <h3 className="font-semibold text-text-primary">{p.title}</h3>
-                <p className="mt-1 text-sm text-text-muted">{p.description}</p>
-                <ul className="mt-3 space-y-1.5">
-                  {p.points.map(pt => (
-                    <li key={pt} className="flex gap-2 text-[13px] leading-snug text-text-primary/85">
-                      <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
+        <dl className="card grid content-start gap-5 p-6 text-sm">
+          <div>
+            <dt className="eyebrow mb-2">Target roles</dt>
+            <dd className="flex flex-wrap gap-2">
+              {profile.targetRoles.map(r => (
+                <span key={r} className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
+                  {r}
+                </span>
+              ))}
+            </dd>
+          </div>
+          <div>
+            <dt className="eyebrow mb-1.5">Currently</dt>
+            <dd className="text-text-primary">
+              {profile.currentRole.title} · {profile.currentRole.company}
+            </dd>
+          </div>
+          <div>
+            <dt className="eyebrow mb-1.5">Work mode</dt>
+            <dd className="text-text-primary">{profile.workModes.join(' · ')}</dd>
+          </div>
+          <div>
+            <dt className="eyebrow mb-1.5">Languages</dt>
+            <dd className="text-text-primary">
+              {profile.languages.map(l => `${l.name} (${l.level})`).join(' · ')}
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {pillars.map(p => {
+          const Icon = icons[p.icon]
+          return (
+            <div key={p.title} className="card card-hover p-5">
+              <div className="mb-3 grid h-10 w-10 place-items-center rounded-lg bg-accent/10 text-accent">
+                <Icon size={20} />
               </div>
-            )
-          })}
-        </div>
+              <h3 className="font-semibold text-text-primary">{p.title}</h3>
+              <p className="mt-1 text-sm text-text-muted">{p.description}</p>
+              <ul className="mt-3 space-y-1.5">
+                {p.points.map(pt => (
+                  <li key={pt} className="flex gap-2 text-[13px] leading-snug text-text-primary/85">
+                    <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        })}
       </div>
     </section>
   )

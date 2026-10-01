@@ -2,13 +2,19 @@ export const profile = {
   name: 'Georgios Nicolaides',
   shortName: 'George Nicolaides',
   headline: 'DevSecOps & Cloud Security Engineer',
+  currentRole: { title: 'Service Desk Engineer', company: 'CDMA Services Ltd.' },
   targetRoles: ['DevOps Engineer', 'DevSecOps Engineer', 'Cloud Security', 'Security Engineer / SOC'],
   pitch:
-    'I build security into the delivery pipeline. CI/CD security gates, cloud misconfiguration auditing, containerised services and log-based threat detection, all written, tested and shipped as working tools.',
+    'I build security into the delivery pipeline and use AI agents to ship it faster. My work covers CI/CD security gates, cloud misconfiguration auditing, containerised services and log-based threat detection, all written, tested and shipped as working tools.',
   summary:
-    'MEng Cybersecurity graduate (University of Limerick) and BSc Informatics & Telematics (Harokopio University, thesis graded 10/10). My work sits between operations and security: I automate infrastructure with Ansible, Docker and Kubernetes, put scanners and policy checks into pipelines, and build the detection and response tooling a SOC team relies on. I also do applied cryptography research, including a lightweight RFID/NFC mutual-authentication protocol that I formally verified with ProVerif.',
+    'MEng Cybersecurity graduate (University of Limerick) and BSc Informatics & Telematics (Harokopio University, thesis graded 10/10), currently a Service Desk Engineer at CDMA Services. My work sits between operations and security: I automate infrastructure with Ansible, Docker and Kubernetes, put scanners and policy checks into pipelines, and build the detection and response tooling a SOC team relies on. I work AI-first, using Claude Code and Copilot with my own prompts and review skills to build, test and review code. I also do applied cryptography research, including a lightweight RFID/NFC mutual-authentication protocol that I formally verified with ProVerif.',
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
+  workModes: ['On-site / hybrid in Cyprus', 'Remote'],
+  languages: [
+    { name: 'Greek', level: 'Native' },
+    { name: 'English', level: 'Fluent' },
+  ],
   github: 'https://github.com/GiorgosNicolaides',
   linkedin: 'https://www.linkedin.com/in/giorgosnicolaides/',
   cv: '/George_Nicolaides_CV.pdf',
@@ -22,13 +28,13 @@ export const profile = {
 export const stats = [
   { value: '10+', label: 'security & DevOps tools shipped' },
   { value: '14', label: 'CIS AWS controls automated' },
+  { value: '5', label: 'vendor certifications (Sophos, Kaseya)' },
   { value: '1,807×', label: 'faster keygen vs RSA-2048 (LEO research)' },
-  { value: '10/10', label: 'BSc thesis grade' },
 ]
 
 export interface Pillar {
   title: string
-  icon: 'pipeline' | 'cloud' | 'radar' | 'lock'
+  icon: 'pipeline' | 'cloud' | 'radar' | 'lock' | 'spark' | 'desk'
   description: string
   points: string[]
 }
@@ -43,6 +49,17 @@ export const pillars: Pillar[] = [
       'Dependency CVE scanning (OSV.dev) and secret detection',
       'Static analysis rules mapped to CWE',
       'Container images built, tagged and pushed to GHCR',
+    ],
+  },
+  {
+    title: 'AI & Agentic Automation',
+    icon: 'spark',
+    description: 'Using AI agents as a force multiplier, with a human checking the output.',
+    points: [
+      'Agentic coding with Claude Code to build and test the tools on this site',
+      'Reusable prompts, CLAUDE.md files, skills and security review checklists',
+      'Claude and OpenAI APIs, plus GitHub Copilot in day-to-day work',
+      'ML anomaly detection (Isolation Forest) in production-style APIs',
     ],
   },
   {
@@ -65,6 +82,17 @@ export const pillars: Pillar[] = [
       'Incident response playbooks following NIST SP 800-61',
       'MITRE ATT&CK mapping and blue-team endpoint scanning',
       'SIEM workflows with the ELK Stack and Splunk',
+    ],
+  },
+  {
+    title: 'IT Operations & Endpoint',
+    icon: 'desk',
+    description: 'Day-to-day experience running real client environments.',
+    points: [
+      'L1 service desk support for client organisations',
+      'Microsoft 365 and Entra ID user, licence and access administration',
+      'Kaseya stack: Autotask PSA, IT Glue, Datto RMM',
+      'Sophos-certified endpoint and workspace protection',
     ],
   },
   {
@@ -94,40 +122,67 @@ export const skillGroups: { name: string; skills: string[] }[] = [
     skills: ['GitHub Actions', 'Jenkins Pipelines', 'Security gating', 'Bash', 'Make', 'pytest'],
   },
   {
+    name: 'AI & Agentic Tooling',
+    skills: [
+      'Claude Code',
+      'Claude API',
+      'OpenAI API',
+      'GitHub Copilot',
+      'Prompt & skill engineering',
+      'AI-assisted code review',
+      'scikit-learn',
+      'News-fetching agent (in progress)',
+    ],
+  },
+  {
     name: 'Security Tooling',
     skills: ['OSV.dev', 'Semgrep', 'Bandit', 'Burp Suite', 'Nmap', 'Wireshark', 'VirusTotal API', 'ProVerif', 'Flipper Zero'],
   },
   {
     name: 'Detection & Response',
-    skills: ['SIEM (ELK, Splunk)', 'Log analysis', 'scikit-learn', 'MITRE ATT&CK', 'NIST SP 800-61', 'CIS Benchmarks', 'NIST CSF'],
+    skills: ['SIEM (ELK, Splunk)', 'Log analysis', 'MITRE ATT&CK', 'NIST SP 800-61', 'CIS Benchmarks', 'NIST CSF'],
+  },
+  {
+    name: 'IT Operations & Endpoint',
+    skills: ['Microsoft 365', 'Entra ID', 'Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos Endpoint', 'L1 service desk'],
   },
   {
     name: 'AppSec & Identity',
     skills: ['Zero Trust', 'JWT', 'RBAC', 'OAuth 2.0', 'Spring Security', 'Secure SDLC', 'CWE / OWASP'],
   },
   {
-    name: 'Languages',
-    skills: ['Python', 'Bash', 'C', 'Java', 'TypeScript / JavaScript', 'SQL'],
-  },
-  {
-    name: 'Frameworks & Data',
-    skills: ['FastAPI', 'Node.js / Express', 'Next.js / React', 'Spring Boot', 'PostgreSQL', 'SQLite'],
+    name: 'Languages & Frameworks',
+    skills: ['Python', 'Bash', 'C', 'Java', 'TypeScript', 'SQL', 'FastAPI', 'Node.js / Express', 'Next.js / React', 'Spring Boot', 'PostgreSQL'],
   },
 ]
 
 export interface TimelineItem {
-  kind: 'education' | 'leadership'
+  kind: 'work' | 'education' | 'leadership'
   title: string
   org: string
   place: string
   period: string
+  current?: boolean
   points: string[]
 }
 
 export const timeline: TimelineItem[] = [
   {
+    kind: 'work',
+    title: 'Service Desk Engineer',
+    org: 'CDMA Services Ltd.',
+    place: 'Nicosia, Cyprus',
+    period: 'Sep 2026 – Present',
+    current: true,
+    points: [
+      'Level 1 support for client users and environments: triage, troubleshooting, resolution and escalation',
+      'Microsoft 365 and Entra ID administration: user accounts, licences and access',
+      'Ticket handling in Autotask PSA, documentation in IT Glue, and remote endpoint management with Datto RMM',
+    ],
+  },
+  {
     kind: 'education',
-    title: 'Master of Engineering, Cybersecurity (graduated)',
+    title: 'Master of Engineering, Cybersecurity',
     org: 'University of Limerick',
     place: 'Ireland',
     period: 'Sep 2025 – Aug 2026',
@@ -170,6 +225,17 @@ export const timeline: TimelineItem[] = [
   },
 ]
 
-export const certifications = [
-  { name: 'TryHackMe', issuer: 'Hands-on offensive & defensive labs', status: 'Active', href: 'https://tryhackme.com/p/georgenic' },
+export interface Certification {
+  name: string
+  issuer: string
+  year?: string
+  href?: string
+}
+
+export const certifications: Certification[] = [
+  { name: 'Sophos Certified Endpoint Engineer', issuer: 'Sophos', year: '2026' },
+  { name: 'Sophos Workspace Protection', issuer: 'Sophos', year: '2026' },
+  { name: 'Datto RMM Certified', issuer: 'Kaseya' },
+  { name: 'Autotask PSA Certified', issuer: 'Kaseya' },
+  { name: 'IT Glue Certified', issuer: 'Kaseya' },
 ]

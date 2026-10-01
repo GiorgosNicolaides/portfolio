@@ -9,7 +9,7 @@ import { profile } from '@/data/profile'
 const siteUrl = 'https://georgiosnicolaides.vercel.app'
 const title = `${profile.name} | ${profile.headline}`
 const description =
-  'DevSecOps and cloud security engineer. CI/CD security gates, AWS CIS auditing, Docker/Kubernetes delivery, and ML-based threat detection. MEng Cybersecurity, University of Limerick.'
+  'DevSecOps and cloud security engineer. CI/CD security gates, AWS CIS auditing, Docker/Kubernetes delivery, ML threat detection and AI-assisted automation. MEng Cybersecurity, University of Limerick.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     'GitHub Actions',
     'AWS',
     'SOC analyst',
+    'AI automation',
+    'agentic AI',
+    'Claude Code',
+    'service desk engineer',
+    'Microsoft 365',
+    'Sophos',
     'Cyprus',
   ],
   authors: [{ name: profile.name, url: siteUrl }],
@@ -62,6 +68,8 @@ const jsonLd = {
   url: siteUrl,
   address: { '@type': 'PostalAddress', addressLocality: 'Nicosia', addressCountry: 'CY' },
   alumniOf: ['University of Limerick', 'Harokopio University'],
+  worksFor: { '@type': 'Organization', name: profile.currentRole.company },
+  knowsLanguage: profile.languages.map(l => l.name),
   sameAs: [profile.github, profile.linkedin],
 }
 

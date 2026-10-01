@@ -10,7 +10,7 @@ export default function Contact() {
           Looking for a DevOps or security engineer who automates the secure path?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-text-muted">
-          I&apos;m open to DevOps, DevSecOps, cloud security and SOC roles, and happy to talk through any of these projects in detail.
+          I&apos;m open to DevOps, DevSecOps, cloud security and SOC roles, on-site or hybrid in Cyprus or remote. I&apos;m happy to talk through any of these projects in detail.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a href={`mailto:${profile.email}`} className="btn-primary">

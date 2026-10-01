@@ -152,3 +152,32 @@ export function BookIcon(props: IconProps) {
     </Stroke>
   )
 }
+
+export function SparkIcon(props: IconProps) {
+  return (
+    <Stroke {...props}>
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
+      <path d="m12 8 1.4 2.6L16 12l-2.6 1.4L12 16l-1.4-2.6L8 12l2.6-1.4L12 8z" />
+    </Stroke>
+  )
+}
+
+export function HeadsetIcon(props: IconProps) {
+  return (
+    <Stroke {...props}>
+      <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
+      <rect x="3" y="14" width="4" height="6" rx="1.5" />
+      <rect x="17" y="14" width="4" height="6" rx="1.5" />
+      <path d="M19 20a3 3 0 0 1-3 2h-3" />
+    </Stroke>
+  )
+}
+
+export function BriefcaseIcon(props: IconProps) {
+  return (
+    <Stroke {...props}>
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" />
+    </Stroke>
+  )
+}

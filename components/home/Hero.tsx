@@ -57,6 +57,8 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-muted">
+            <span>{profile.currentRole.title} @ {profile.currentRole.company}</span>
+            <span className="hidden h-1 w-1 rounded-full bg-border-subtle sm:block" />
             <span>MEng Cybersecurity, University of Limerick (2026)</span>
             <span className="hidden h-1 w-1 rounded-full bg-border-subtle sm:block" />
             <span>{profile.location}</span>

@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 const stages = [
   { name: 'checkout', detail: 'actions/checkout@v4', tool: 'GitHub Actions' },
   { name: 'unit tests', detail: 'pytest -q', tool: 'pytest' },
+  { name: 'ai review', detail: 'custom review skills', tool: 'Claude Code' },
   { name: 'sast', detail: '30+ CWE rules', tool: 'COVSAW' },
   { name: 'dependency scan', detail: 'OSV.dev · PyPI · npm · Go · Cargo', tool: 'devsecops-scanner' },
   { name: 'secret scan', detail: 'redacted findings', tool: 'devsecops-scanner' },
@@ -87,7 +88,7 @@ export default function PipelineCard() {
       </ol>
 
       <div className="border-t border-border-subtle bg-panel-2 px-4 py-2.5 font-mono text-[11px] text-text-muted">
-        Every stage above is a tool I built or configured. See the{' '}
+        Every stage above is a tool I built, configured or use daily. See the{' '}
         <Link href="/projects" className="text-accent hover:underline">
           projects
         </Link>
