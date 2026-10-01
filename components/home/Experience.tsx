@@ -61,7 +61,7 @@ export default function Experience() {
 
           <div className="card p-6">
             <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
-              <ShieldIcon size={16} className="text-accent" /> Certifications & practice
+              <ShieldIcon size={16} className="text-accent" /> Hands-on practice
             </div>
             <ul className="space-y-3">
               {certifications.map(c => (
@@ -78,7 +78,7 @@ export default function Experience() {
                     </div>
                     <div className="text-xs text-text-muted">{c.issuer}</div>
                   </div>
-                  <span className="shrink-0 rounded-full bg-warning/10 px-2 py-0.5 font-mono text-[11px] text-warning">
+                  <span className="shrink-0 rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
                     {c.status}
                   </span>
                 </li>

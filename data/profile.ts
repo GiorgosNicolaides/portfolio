@@ -6,7 +6,7 @@ export const profile = {
   pitch:
     'I build security into the delivery pipeline. CI/CD security gates, cloud misconfiguration auditing, containerised services and log-based threat detection, all written, tested and shipped as working tools.',
   summary:
-    'MEng Cybersecurity (University of Limerick) and BSc Informatics & Telematics (Harokopio University, thesis graded 10/10). My work sits between operations and security: I automate infrastructure with Ansible, Docker and Kubernetes, put scanners and policy checks into pipelines, and build the detection and response tooling a SOC team relies on. I also do applied cryptography research, including a lightweight RFID/NFC mutual-authentication protocol that I formally verified with ProVerif.',
+    'MEng Cybersecurity graduate (University of Limerick) and BSc Informatics & Telematics (Harokopio University, thesis graded 10/10). My work sits between operations and security: I automate infrastructure with Ansible, Docker and Kubernetes, put scanners and policy checks into pipelines, and build the detection and response tooling a SOC team relies on. I also do applied cryptography research, including a lightweight RFID/NFC mutual-authentication protocol that I formally verified with ProVerif.',
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   github: 'https://github.com/GiorgosNicolaides',
@@ -127,7 +127,7 @@ export interface TimelineItem {
 export const timeline: TimelineItem[] = [
   {
     kind: 'education',
-    title: 'Master of Engineering, Cybersecurity',
+    title: 'Master of Engineering, Cybersecurity (graduated)',
     org: 'University of Limerick',
     place: 'Ireland',
     period: 'Sep 2025 – Aug 2026',
@@ -171,6 +171,5 @@ export const timeline: TimelineItem[] = [
 ]
 
 export const certifications = [
-  { name: 'CompTIA Security+', issuer: 'CompTIA', status: 'In progress' },
   { name: 'TryHackMe', issuer: 'Hands-on offensive & defensive labs', status: 'Active', href: 'https://tryhackme.com/p/georgenic' },
 ]
