@@ -7,10 +7,10 @@ const description =
   'An interactive Merkle tree — tamper with a transaction to watch hashes cascade, or build a proof of inclusion.'
 
 export const metadata: Metadata = {
-  title: 'Merkle Trees — Georgios Nicolaides',
+  title: 'Merkle Trees',
   description,
   openGraph: {
-    title: 'Merkle Trees — Georgios Nicolaides',
+    title: 'Merkle Trees',
     description,
     type: 'article',
   },

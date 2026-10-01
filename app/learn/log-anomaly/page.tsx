@@ -7,10 +7,10 @@ const description =
   'An animated log anomaly detection pipeline — from raw log line to an Isolation Forest anomaly alert.'
 
 export const metadata: Metadata = {
-  title: 'Log Anomaly Detection Pipeline — Georgios Nicolaides',
+  title: 'Log Anomaly Detection Pipeline',
   description,
   openGraph: {
-    title: 'Log Anomaly Detection Pipeline — Georgios Nicolaides',
+    title: 'Log Anomaly Detection Pipeline',
     description,
     type: 'article',
   },

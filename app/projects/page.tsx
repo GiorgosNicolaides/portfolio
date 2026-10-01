@@ -1,20 +1,10 @@
 import type { Metadata } from 'next'
 import ProjectsView from '@/components/projects/ProjectsView'
 
-const description =
-  'Security engineering projects including Zero Trust dashboards, AI threat detection, DevSecOps scanners, and cloud misconfiguration auditing.'
-
 export const metadata: Metadata = {
-  title: 'Projects — Georgios Nicolaides',
-  description,
-  openGraph: {
-    title: 'Projects — Georgios Nicolaides',
-    description,
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-  },
+  title: 'Projects',
+  description:
+    'DevSecOps, cloud security, detection engineering and applied cryptography projects: CI/CD scanners, CIS AWS auditing, Kubernetes delivery, Zero Trust and ML threat detection.',
 }
 
 export default function ProjectsPage() {

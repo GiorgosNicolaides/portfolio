@@ -7,10 +7,10 @@ const description =
   'An interactive CIS benchmark audit across S3, IAM, and Security Groups with a live risk score.'
 
 export const metadata: Metadata = {
-  title: 'Cloud Misconfiguration Audit — Georgios Nicolaides',
+  title: 'Cloud Misconfiguration Audit',
   description,
   openGraph: {
-    title: 'Cloud Misconfiguration Audit — Georgios Nicolaides',
+    title: 'Cloud Misconfiguration Audit',
     description,
     type: 'article',
   },

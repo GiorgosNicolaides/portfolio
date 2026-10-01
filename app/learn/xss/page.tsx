@@ -7,10 +7,10 @@ const description =
   'Reflected, stored, and DOM-based XSS attacks side by side with their defenses — output encoding, CSP, and more.'
 
 export const metadata: Metadata = {
-  title: 'XSS Attack & Defense — Georgios Nicolaides',
+  title: 'XSS Attack & Defense',
   description,
   openGraph: {
-    title: 'XSS Attack & Defense — Georgios Nicolaides',
+    title: 'XSS Attack & Defense',
     description,
     type: 'article',
   },

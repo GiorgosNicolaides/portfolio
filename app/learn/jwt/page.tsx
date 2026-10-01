@@ -7,10 +7,10 @@ const description =
   'An animated sequence diagram walking through JWT authentication — login, signing, verification, and revocation.'
 
 export const metadata: Metadata = {
-  title: 'JWT Authentication Flow — Georgios Nicolaides',
+  title: 'JWT Authentication Flow',
   description,
   openGraph: {
-    title: 'JWT Authentication Flow — Georgios Nicolaides',
+    title: 'JWT Authentication Flow',
     description,
     type: 'article',
   },

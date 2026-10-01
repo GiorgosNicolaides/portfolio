@@ -7,10 +7,10 @@ const description =
   'An animated CI/CD pipeline showing security gates — secret scanning, CVE checks, SAST, container scanning, and DAST.'
 
 export const metadata: Metadata = {
-  title: 'DevSecOps Pipeline — Georgios Nicolaides',
+  title: 'DevSecOps Pipeline',
   description,
   openGraph: {
-    title: 'DevSecOps Pipeline — Georgios Nicolaides',
+    title: 'DevSecOps Pipeline',
     description,
     type: 'article',
   },

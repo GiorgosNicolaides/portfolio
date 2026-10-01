@@ -7,10 +7,10 @@ const description =
   'An interactive MITRE ATT&CK matrix — explore tactics and techniques and trace real attack scenarios.'
 
 export const metadata: Metadata = {
-  title: 'MITRE ATT&CK Kill Chain — Georgios Nicolaides',
+  title: 'MITRE ATT&CK Kill Chain',
   description,
   openGraph: {
-    title: 'MITRE ATT&CK Kill Chain — Georgios Nicolaides',
+    title: 'MITRE ATT&CK Kill Chain',
     description,
     type: 'article',
   },

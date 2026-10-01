@@ -7,10 +7,10 @@ const description =
   'A side-by-side comparison of RSA and ECC public key cryptography, with key sizes, speed, and use cases.'
 
 export const metadata: Metadata = {
-  title: 'Public Key Cryptography: RSA vs ECC — Georgios Nicolaides',
+  title: 'Public Key Cryptography: RSA vs ECC',
   description,
   openGraph: {
-    title: 'Public Key Cryptography: RSA vs ECC — Georgios Nicolaides',
+    title: 'Public Key Cryptography: RSA vs ECC',
     description,
     type: 'article',
   },

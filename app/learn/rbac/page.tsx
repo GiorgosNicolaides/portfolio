@@ -7,10 +7,10 @@ const description =
   'An interactive RBAC policy matrix and evaluator — pick a role and resource to see access granted or denied.'
 
 export const metadata: Metadata = {
-  title: 'RBAC Policy Evaluation — Georgios Nicolaides',
+  title: 'RBAC Policy Evaluation',
   description,
   openGraph: {
-    title: 'RBAC Policy Evaluation — Georgios Nicolaides',
+    title: 'RBAC Policy Evaluation',
     description,
     type: 'article',
   },

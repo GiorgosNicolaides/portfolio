@@ -7,10 +7,10 @@ const description =
   'Linux and Windows privilege escalation paths and vectors, each with its defensive countermeasure.'
 
 export const metadata: Metadata = {
-  title: 'Privilege Escalation — Georgios Nicolaides',
+  title: 'Privilege Escalation',
   description,
   openGraph: {
-    title: 'Privilege Escalation — Georgios Nicolaides',
+    title: 'Privilege Escalation',
     description,
     type: 'article',
   },

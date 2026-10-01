@@ -3,22 +3,16 @@ import { cn } from '@/lib/utils'
 interface SectionHeaderProps {
   title: string
   subtitle?: string
+  eyebrow?: string
   className?: string
 }
 
-export default function SectionHeader({ title, subtitle, className }: SectionHeaderProps) {
+export default function SectionHeader({ title, subtitle, eyebrow, className }: SectionHeaderProps) {
   return (
     <div className={cn('mb-12', className)}>
-      <div className="flex items-center gap-3 mb-3">
-        <span className="text-accent font-mono text-sm">{'>'}</span>
-        <h2 className="text-3xl font-bold text-text-primary tracking-tight">
-          {title}
-        </h2>
-      </div>
-      <div className="h-px w-16 bg-accent mb-4" />
-      {subtitle && (
-        <p className="text-text-muted text-base max-w-2xl">{subtitle}</p>
-      )}
+      {eyebrow && <div className="eyebrow mb-3">{eyebrow}</div>}
+      <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">{title}</h2>
+      {subtitle && <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted">{subtitle}</p>}
     </div>
   )
 }

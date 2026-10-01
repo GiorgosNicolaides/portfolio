@@ -1,41 +1,26 @@
+import { profile } from '@/data/profile'
+import { GitHubIcon, LinkedInIcon, MailIcon } from '@/components/ui/Icons'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border-subtle mt-20">
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-text-muted text-sm font-mono">
-          © {year} Georgios Nicolaides
+    <footer className="mt-24 border-t border-border-subtle">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
+        <p className="text-sm text-text-muted">
+          © {year} {profile.name} · {profile.headline}
         </p>
-
-        <div className="flex items-center gap-6">
-          <a
-            href="https://github.com/GiorgosNicolaides"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-muted text-sm font-mono hover:text-accent transition-colors"
-          >
-            GitHub
+        <div className="flex items-center gap-5 text-text-muted">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="transition-colors hover:text-accent">
+            <GitHubIcon />
           </a>
-          <a
-            href="https://www.linkedin.com/in/giorgosnicolaides/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-muted text-sm font-mono hover:text-accent transition-colors"
-          >
-            LinkedIn
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-accent">
+            <LinkedInIcon />
           </a>
-          <a
-            href="mailto:gnicolaides02@gmail.com"
-            className="text-text-muted text-sm font-mono hover:text-accent transition-colors"
-          >
-            Email
+          <a href={`mailto:${profile.email}`} aria-label="Email" className="transition-colors hover:text-accent">
+            <MailIcon />
           </a>
         </div>
-
-        <p className="text-text-muted text-xs font-mono">
-          Built with <span className="text-accent">Next.js</span>
-        </p>
       </div>
     </footer>
   )

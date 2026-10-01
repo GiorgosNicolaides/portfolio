@@ -22,13 +22,13 @@ export default function NotFound() {
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
         <Link
           href="/"
-          className="rounded bg-accent px-6 py-3 font-mono text-sm font-semibold text-background transition-colors hover:bg-accent-dim"
+          className="btn-primary"
         >
           Go Home
         </Link>
         <Link
           href="/projects"
-          className="rounded border border-accent px-6 py-3 font-mono text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
+          className="btn-secondary"
         >
           View Projects
         </Link>

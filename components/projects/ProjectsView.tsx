@@ -1,30 +1,54 @@
 'use client'
 import { useState } from 'react'
-import { useProjects } from '@/hooks/useProjects'
+import { categoryLabels, projects, type ProjectCategory } from '@/data/projects'
 import SectionHeader from '@/components/ui/SectionHeader'
-import TagFilter, { type ProjectFilter } from '@/components/projects/TagFilter'
-import ProjectGrid from '@/components/projects/ProjectGrid'
+import ProjectCard from '@/components/projects/ProjectCard'
+import { cn } from '@/lib/utils'
+
+type Filter = 'all' | ProjectCategory
+
+const filters: Filter[] = ['all', ...(Object.keys(categoryLabels) as ProjectCategory[])]
 
 export default function ProjectsView() {
-  const { projects, loading } = useProjects()
-  const [filter, setFilter] = useState<ProjectFilter>('all')
-
-  const list = projects.filter(p => p.type === 'project')
+  const [filter, setFilter] = useState<Filter>('all')
+  const list = filter === 'all' ? projects : projects.filter(p => p.category === filter)
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
       <SectionHeader
+        eyebrow="Portfolio"
         title="Projects"
-        subtitle="Security tooling and engineering projects — built, tested, and deployed."
+        subtitle="Only complete work is listed here: documented, tested and runnable. Research code is private while publication is pending, and I can walk you through it on request."
       />
 
-      <TagFilter active={filter} onChange={setFilter} />
+      <div className="mb-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by category">
+        {filters.map(f => {
+          const count = f === 'all' ? projects.length : projects.filter(p => p.category === f).length
+          return (
+            <button
+              key={f}
+              role="tab"
+              aria-selected={filter === f}
+              onClick={() => setFilter(f)}
+              className={cn(
+                'rounded-full border px-4 py-1.5 text-sm transition-colors',
+                filter === f
+                  ? 'border-accent bg-accent/10 text-accent'
+                  : 'border-border-subtle text-text-muted hover:border-accent/50 hover:text-text-primary'
+              )}
+            >
+              {f === 'all' ? 'All' : categoryLabels[f]}
+              <span className="ml-1.5 font-mono text-xs opacity-60">{count}</span>
+            </button>
+          )
+        })}
+      </div>
 
-      {loading ? (
-        <p className="font-mono text-sm text-text-muted">loading…</p>
-      ) : (
-        <ProjectGrid projects={list} filter={filter} />
-      )}
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {list.map(p => (
+          <ProjectCard key={p.slug} project={p} />
+        ))}
+      </div>
     </div>
   )
 }

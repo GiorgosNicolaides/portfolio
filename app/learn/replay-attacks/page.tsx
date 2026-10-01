@@ -7,10 +7,10 @@ const description =
   'Compare a vulnerable authentication flow with a nonce- and timestamp-protected one that defeats replay attacks.'
 
 export const metadata: Metadata = {
-  title: 'Replay Attack Prevention — Georgios Nicolaides',
+  title: 'Replay Attack Prevention',
   description,
   openGraph: {
-    title: 'Replay Attack Prevention — Georgios Nicolaides',
+    title: 'Replay Attack Prevention',
     description,
     type: 'article',
   },
