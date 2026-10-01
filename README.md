@@ -19,3 +19,13 @@ npm run dev     # http://localhost:3000
 npm run lint
 npm run build
 ```
+
+## CV
+
+The one-page CV is generated from `cv/cv.html` (single column, ATS-friendly, Inter font bundled in `cv/fonts`).
+Edit the HTML, then rebuild the PDF served at `/George_Nicolaides_CV.pdf`:
+
+```bash
+npm i -D playwright && npx playwright install chromium   # once
+node cv/build.mjs
+```
