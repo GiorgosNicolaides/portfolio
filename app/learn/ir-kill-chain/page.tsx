@@ -7,10 +7,10 @@ const description =
   'Map attacker techniques (MITRE ATT&CK) to defender responses across the incident response kill chain.'
 
 export const metadata: Metadata = {
-  title: 'Incident Response Kill Chain — Georgios Nicolaides',
+  title: 'Incident Response Kill Chain',
   description,
   openGraph: {
-    title: 'Incident Response Kill Chain — Georgios Nicolaides',
+    title: 'Incident Response Kill Chain',
     description,
     type: 'article',
   },

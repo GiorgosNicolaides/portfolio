@@ -7,10 +7,10 @@ const description =
   'An interactive, step-by-step walkthrough of the OAuth 2.0 Authorization Code Flow with PKCE.'
 
 export const metadata: Metadata = {
-  title: 'OAuth 2.0 Flow — Georgios Nicolaides',
+  title: 'OAuth 2.0 Flow',
   description,
   openGraph: {
-    title: 'OAuth 2.0 Flow — Georgios Nicolaides',
+    title: 'OAuth 2.0 Flow',
     description,
     type: 'article',
   },

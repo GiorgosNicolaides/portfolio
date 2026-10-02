@@ -7,10 +7,10 @@ const description =
   'An interactive policy-decision flow showing how Zero Trust evaluates every request before granting access.'
 
 export const metadata: Metadata = {
-  title: 'Zero Trust Architecture — Georgios Nicolaides',
+  title: 'Zero Trust Architecture',
   description,
   openGraph: {
-    title: 'Zero Trust Architecture — Georgios Nicolaides',
+    title: 'Zero Trust Architecture',
     description,
     type: 'article',
   },

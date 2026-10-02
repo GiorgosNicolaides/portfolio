@@ -7,10 +7,10 @@ const description =
   'An interactive SQL injection lab — try real payloads against a vulnerable query and see the parameterized fix.'
 
 export const metadata: Metadata = {
-  title: 'SQL Injection — Georgios Nicolaides',
+  title: 'SQL Injection',
   description,
   openGraph: {
-    title: 'SQL Injection — Georgios Nicolaides',
+    title: 'SQL Injection',
     description,
     type: 'article',
   },

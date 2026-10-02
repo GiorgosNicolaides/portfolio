@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import Badge from '@/components/ui/Badge'
-import { projects, getProject } from '@/lib/projects'
+import { categoryLabels, getProject, projects } from '@/data/projects'
+import { profile } from '@/data/profile'
+import ProjectCard from '@/components/projects/ProjectCard'
+import { ArrowRightIcon, ExternalIcon, GitHubIcon, LockIcon, MailIcon, UsersIcon } from '@/components/ui/Icons'
 
 interface PageProps {
   params: { slug: string }
@@ -15,52 +17,13 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageProps): Metadata {
   const project = getProject(params.slug)
   if (!project) {
-    return { title: 'Project Not Found — Georgios Nicolaides' }
+    return { title: 'Project not found' }
   }
-  const title = `${project.title} — Georgios Nicolaides`
   return {
-    title,
-    description: project.description,
-    openGraph: {
-      title,
-      description: project.description,
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary',
-    },
+    title: project.title,
+    description: project.tagline,
+    openGraph: { title: project.title, description: project.tagline, type: 'article' },
   }
-}
-
-const categoryLabels: Record<string, string> = {
-  security: 'Security',
-  cs: 'CS',
-  'research-tool': 'Research Tool',
-  research: 'Research',
-}
-
-const statusLabels: Record<string, { label: string; variant: 'warning' | 'blue' | 'success' }> = {
-  in_progress: { label: 'In Progress', variant: 'warning' },
-  pending_submission: { label: 'Pending Submission', variant: 'blue' },
-  completed: { label: 'Completed', variant: 'success' },
-}
-
-function GitHubIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-      <path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.21 3.44 9.63 8.21 11.19.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.37-1.34-1.74-1.34-1.74-1.09-.73.08-.72.08-.72 1.2.08 1.84 1.22 1.84 1.22 1.07 1.8 2.81 1.28 3.5.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.31-5.47-5.84 0-1.29.47-2.34 1.24-3.17-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.21a11.5 11.5 0 0 1 6 0c2.29-1.53 3.3-1.21 3.3-1.21.66 1.65.24 2.87.12 3.17.77.83 1.24 1.88 1.24 3.17 0 4.54-2.81 5.54-5.49 5.83.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .31.21.68.83.56A12.01 12.01 0 0 0 24 12.29C24 5.78 18.63.5 12 .5z" />
-    </svg>
-  )
-}
-
-function DemoIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-      <path d="M15 3h6v6" />
-      <path d="M10 14 21 3" />
-    </svg>
-  )
 }
 
 export default function ProjectDetailPage({ params }: PageProps) {
@@ -69,130 +32,123 @@ export default function ProjectDetailPage({ params }: PageProps) {
     notFound()
   }
 
-  const status = project.status ? statusLabels[project.status] : undefined
+  const related = projects
+    .filter(p => p.slug !== project.slug && p.category === project.category)
+    .concat(projects.filter(p => p.slug !== project.slug && p.category !== project.category && p.featured))
+    .slice(0, 2)
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
+    <div className="mx-auto max-w-4xl px-6 py-14 sm:py-20">
       <Link
         href="/projects"
-        className="mb-8 inline-flex items-center gap-1 font-mono text-sm text-text-muted transition-colors hover:text-accent"
+        className="mb-10 inline-flex items-center gap-1 text-sm text-text-muted transition-colors hover:text-accent"
       >
-        ← Projects
+        ← All projects
       </Link>
 
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <Badge variant="security">{categoryLabels[project.category] ?? project.category}</Badge>
-        <Badge variant={project.type === 'research' ? 'research' : 'default'}>
-          {project.type === 'research' ? 'Research' : 'Project'}
-        </Badge>
-        {status && <Badge variant={status.variant}>{status.label}</Badge>}
+      <div className="mb-5 flex flex-wrap items-center gap-2">
+        <span className="rounded-md bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">
+          {categoryLabels[project.category]}
+        </span>
+        {project.team && (
+          <span className="inline-flex items-center gap-1 rounded-md bg-sky/10 px-2 py-0.5 font-mono text-xs text-sky">
+            <UsersIcon size={12} /> Team project
+          </span>
+        )}
+        {project.private && (
+          <span className="inline-flex items-center gap-1 rounded-md bg-warning/10 px-2 py-0.5 font-mono text-xs text-warning">
+            <LockIcon size={12} /> Code on request
+          </span>
+        )}
+        <span className="font-mono text-xs text-text-muted">{project.year}</span>
       </div>
 
-      <h1 className="mb-6 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
-        {project.title}
-      </h1>
+      <h1 className="text-3xl font-bold tracking-tight text-text-primary sm:text-5xl">{project.title}</h1>
+      <p className="mt-4 text-lg leading-relaxed text-text-muted">{project.tagline}</p>
 
-      {(project.research_type || project.institution || project.year) && (
-        <div className="mb-6 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border-subtle bg-border-subtle sm:grid-cols-3">
-          {project.research_type && (
-            <div className="bg-panel p-4">
-              <div className="font-mono text-xs text-text-muted">Research Type</div>
-              <div className="mt-1 text-sm text-text-primary">{project.research_type}</div>
-            </div>
-          )}
-          {project.institution && (
-            <div className="bg-panel p-4">
-              <div className="font-mono text-xs text-text-muted">Institution</div>
-              <div className="mt-1 text-sm text-text-primary">{project.institution}</div>
-            </div>
-          )}
-          {project.year && (
-            <div className="bg-panel p-4">
-              <div className="font-mono text-xs text-text-muted">Year</div>
-              <div className="mt-1 text-sm text-text-primary">{project.year}</div>
-            </div>
-          )}
+      <div className="mt-8 flex flex-wrap gap-3">
+        {project.github ? (
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <GitHubIcon size={16} /> View source
+          </a>
+        ) : (
+          <a href={`mailto:${profile.email}?subject=${encodeURIComponent(`Code access: ${project.title}`)}`} className="btn-primary">
+            <MailIcon size={16} /> Request code walkthrough
+          </a>
+        )}
+        {project.extraLinks?.map(l => (
+          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+            <ExternalIcon size={16} /> {l.label}
+          </a>
+        ))}
+        {project.learnHref && (
+          <Link href={project.learnHref} className="btn-secondary">
+            Interactive diagram <ArrowRightIcon size={16} />
+          </Link>
+        )}
+      </div>
+
+      <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border-subtle bg-border-subtle sm:grid-cols-3">
+        {project.metrics.map(m => (
+          <div key={m.label} className="bg-panel px-5 py-5">
+            <div className="font-mono text-2xl font-bold text-accent">{m.value}</div>
+            <div className="mt-1 text-sm text-text-muted">{m.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="card p-6">
+          <div className="eyebrow mb-3 !text-danger">The problem</div>
+          <p className="leading-relaxed text-text-primary/90">{project.problem}</p>
         </div>
-      )}
-
-      <p className="mb-8 leading-relaxed text-text-muted">{project.description}</p>
-
-      {project.stat && (
-        <div className="mb-8 rounded-lg border border-accent/30 bg-accent/5 p-6">
-          <div className="font-mono text-3xl font-bold text-accent sm:text-4xl">{project.stat}</div>
-          <div className="mt-1 font-mono text-xs text-text-muted">benchmark result</div>
+        <div className="card p-6">
+          <div className="eyebrow mb-3">What I built</div>
+          <p className="leading-relaxed text-text-primary/90">{project.solution}</p>
         </div>
-      )}
+      </div>
 
-      {project.note && (
-        <div className="mb-8 rounded-lg border border-l-2 border-border-subtle border-l-blue-400 bg-panel p-5">
-          <div className="mb-1 font-mono text-xs text-blue-400">{'// note'}</div>
-          <p className="text-sm text-text-muted">{project.note}</p>
-        </div>
-      )}
+      <section className="mt-12">
+        <h2 className="mb-5 text-xl font-semibold text-text-primary">Engineering highlights</h2>
+        <ul className="space-y-3">
+          {project.highlights.map(h => (
+            <li key={h} className="flex gap-3 leading-relaxed text-text-primary/90">
+              <span className="mt-1.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-accent/15 text-[10px] text-accent">
+                ✓
+              </span>
+              {h}
+            </li>
+          ))}
+        </ul>
+      </section>
 
-      <div className="mb-8">
-        <h2 className="mb-3 font-mono text-sm text-accent">{'// tags'}</h2>
+      <section className="mt-12">
+        <h2 className="mb-4 text-xl font-semibold text-text-primary">Tech stack</h2>
         <div className="flex flex-wrap gap-2">
-          {project.tags.map(tag => (
-            <Badge key={tag} variant="security">{tag}</Badge>
+          {project.stack.map(t => (
+            <span key={t} className="rounded-lg border border-border-subtle bg-panel px-3 py-1.5 text-sm text-text-primary">
+              {t}
+            </span>
           ))}
         </div>
-      </div>
+      </section>
 
-      {project.highlights && project.highlights.length > 0 && (
-        <div className="mb-8">
-          <h2 className="mb-3 font-mono text-sm text-accent">{'// highlights'}</h2>
-          <ul className="space-y-2">
-            {project.highlights.map((highlight, i) => (
-              <li key={i} className="flex gap-3 text-sm text-text-primary">
-                <span className="mt-0.5 text-accent">▹</span>
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {project.team && (
+        <p className="mt-10 rounded-lg border border-sky/30 bg-sky/5 p-4 text-sm text-text-muted">
+          This was a team project built for a university course and later refined for this portfolio. I&apos;m happy to
+          go through my own contributions in detail.
+        </p>
       )}
 
-      <div className="flex flex-wrap items-center gap-4">
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded bg-accent px-6 py-3 font-mono text-sm font-semibold text-background transition-colors hover:bg-accent-dim"
-          >
-            <GitHubIcon /> View on GitHub
-          </a>
-        )}
-
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded border border-accent px-6 py-3 font-mono text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
-          >
-            <DemoIcon /> Live Demo
-          </a>
-        )}
-      </div>
-
-      {!project.github && (
-        <div className="mt-4 rounded-lg border border-border-subtle bg-panel p-6">
-          <h2 className="mb-1 font-semibold text-text-primary">Code available upon request</h2>
-          <p className="text-sm text-text-muted">
-            This project&apos;s source is private. Reach out and I&apos;m happy to walk through it
-            or share access —{' '}
-            <a
-              href="mailto:gnicolaides02@gmail.com"
-              className="font-mono text-accent transition-colors hover:text-accent-dim"
-            >
-              gnicolaides02@gmail.com
-            </a>
-            .
-          </p>
-        </div>
+      {related.length > 0 && (
+        <section className="mt-20 border-t border-border-subtle pt-12">
+          <h2 className="mb-6 text-xl font-semibold text-text-primary">More projects</h2>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            {related.map(p => (
+              <ProjectCard key={p.slug} project={p} />
+            ))}
+          </div>
+        </section>
       )}
     </div>
   )

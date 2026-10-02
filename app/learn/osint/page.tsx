@@ -7,10 +7,10 @@ const description =
   'An interactive OSINT mind map — explore domain, people, technical, and social intelligence gathering techniques.'
 
 export const metadata: Metadata = {
-  title: 'OSINT Techniques — Georgios Nicolaides',
+  title: 'OSINT Techniques',
   description,
   openGraph: {
-    title: 'OSINT Techniques — Georgios Nicolaides',
+    title: 'OSINT Techniques',
     description,
     type: 'article',
   },

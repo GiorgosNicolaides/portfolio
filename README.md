@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Georgios Nicolaides: Portfolio
 
-## Getting Started
+Personal portfolio for a DevSecOps & Cloud Security Engineer. Built with Next.js 14 (App Router), TypeScript and Tailwind CSS, and deployed on Vercel.
 
-First, run the development server:
+## Editing content
+
+All site content is in typed data files:
+
+- `data/profile.ts`: headline, summary, stats, skills, timeline, certifications
+- `data/projects.ts`: project case studies (problem, solution, metrics, highlights, stack)
+
+Replace `public/George_Nicolaides_CV.pdf` to update the downloadable CV.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## CV
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The one-page CV is generated from `cv/cv.html` (single column, ATS-friendly, Inter font bundled in `cv/fonts`).
+Edit the HTML, then rebuild the PDF served at `/George_Nicolaides_CV.pdf`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -D playwright && npx playwright install chromium   # once
+node cv/build.mjs
+```

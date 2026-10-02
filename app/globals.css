@@ -1,20 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 html,
 body {
-  background-color: #0a0e1a;
-  color: #e2e8f0;
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
+  background-color: #090d14;
+  color: #e6edf6;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid #34d399;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 ::selection {
-  background-color: #00ff88;
-  color: #0a0e1a;
+  background-color: #34d399;
+  color: #090d14;
 }
 
 ::-webkit-scrollbar {
@@ -22,14 +30,60 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0e1a;
+  background: #090d14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e2d40;
+  background: #1f2a3c;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00ff88;
+  background: #34d399;
+}
+
+@layer components {
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  }
+
+  .card {
+    @apply rounded-xl border border-border-subtle bg-panel transition-colors;
+  }
+
+  .card-hover {
+    @apply hover:border-accent/40 hover:bg-panel-2;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-accent;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-md border border-border-subtle bg-background/60 px-2 py-0.5 font-mono text-[11px] text-text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-accent-dim;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-lg border border-border-subtle px-5 py-2.5 text-sm font-semibold text-text-primary transition-colors hover:border-accent/60 hover:text-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

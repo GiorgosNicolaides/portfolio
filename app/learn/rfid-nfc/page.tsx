@@ -7,10 +7,10 @@ const description =
   'The SONDA-MA mutual authentication protocol for passive RFID/NFC tags — step by step, with attack resistance.'
 
 export const metadata: Metadata = {
-  title: 'RFID/NFC Authentication: SONDA-MA — Georgios Nicolaides',
+  title: 'RFID/NFC Authentication: SONDA-MA',
   description,
   openGraph: {
-    title: 'RFID/NFC Authentication: SONDA-MA — Georgios Nicolaides',
+    title: 'RFID/NFC Authentication: SONDA-MA',
     description,
     type: 'article',
   },

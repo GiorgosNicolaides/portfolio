@@ -6,10 +6,10 @@ const description =
   'Interactive diagrams for security concepts — OAuth, Zero Trust, JWT, RBAC, cryptography, MITRE ATT&CK, and offensive security.'
 
 export const metadata: Metadata = {
-  title: 'Interactive Diagrams — Georgios Nicolaides',
+  title: 'Interactive Diagrams',
   description,
   openGraph: {
-    title: 'Interactive Diagrams — Georgios Nicolaides',
+    title: 'Interactive Diagrams',
     description,
     type: 'website',
   },

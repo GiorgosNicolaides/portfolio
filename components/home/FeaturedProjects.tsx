@@ -1,42 +1,29 @@
-'use client'
 import Link from 'next/link'
-import { useProjects } from '@/hooks/useProjects'
-import SectionHeader from '@/components/ui/SectionHeader'
+import { featuredProjects } from '@/data/projects'
 import ProjectCard from '@/components/projects/ProjectCard'
+import SectionHeader from '@/components/ui/SectionHeader'
+import { ArrowRightIcon } from '@/components/ui/Icons'
 
 export default function FeaturedProjects() {
-  const { projects, loading } = useProjects()
-  const featured = projects
-    .filter(p => p.featured && p.type === 'project')
-    .slice(0, 3)
-
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
-      <SectionHeader
-        title="Featured Projects"
-        subtitle="A selection of security tools built end to end — from threat modelling to deployment."
-      />
+    <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
+      <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <SectionHeader
+          eyebrow="Selected work"
+          title="Projects"
+          subtitle="The projects I've built to learn, each with a write-up covering the problem, my approach and what I learned. The code and full documentation are on GitHub."
+          className="mb-0"
+        />
+        <Link href="/projects" className="btn-secondary shrink-0">
+          All projects <ArrowRightIcon size={16} />
+        </Link>
+      </div>
 
-      {loading ? (
-        <p className="font-mono text-sm text-text-muted">loading…</p>
-      ) : (
-        <>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map(project => (
-              <ProjectCard key={project.slug} project={project} maxTags={3} />
-            ))}
-          </div>
-
-          <div className="mt-10">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 font-mono text-sm text-accent transition-colors hover:text-accent-dim"
-            >
-              View all projects →
-            </Link>
-          </div>
-        </>
-      )}
+      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
+        {featuredProjects.map(p => (
+          <ProjectCard key={p.slug} project={p} large />
+        ))}
+      </div>
     </section>
   )
 }
