@@ -1,13 +1,13 @@
 export const profile = {
   name: 'Georgios Nicolaides',
   shortName: 'George Nicolaides',
-  headline: 'Junior Cybersecurity & DevOps Engineer',
+  headline: 'Junior Software, Security & DevOps Engineer',
   currentRole: { title: 'Service Desk Engineer', company: 'CDMA Services Ltd.' },
-  targetRoles: ['Junior DevOps / DevSecOps', 'Junior Security Engineer', 'SOC Analyst'],
+  targetRoles: ['Software Engineer', 'Security Engineer', 'DevOps / DevSecOps', 'SOC Analyst'],
   pitch:
-    "I'm early in my career and I know where I want to go: security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work on a service desk.",
+    "I'm early in my career and I know what I enjoy: software engineering, security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work on a service desk.",
   summary:
-    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Service Desk Engineer at CDMA Services. I'm looking for a junior role in DevOps, DevSecOps or security engineering, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
+    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Service Desk Engineer at CDMA Services. I'm looking for a junior role in software engineering, security or DevOps, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   workModes: ['On-site / hybrid in Cyprus', 'Remote'],
