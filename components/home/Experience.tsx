@@ -110,7 +110,14 @@ export default function Experience() {
           </div>
 
           <div className="card p-6">
-            <div className="mb-4 text-sm font-semibold text-text-primary">Hands-on practice</div>
+            <div className="mb-2 text-sm font-semibold text-text-primary">Hands-on practice</div>
+            <p className="mb-4 text-sm text-text-muted">
+              Offensive and defensive labs on{' '}
+              <a href={profile.tryhackme.profile_url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                TryHackMe ({profile.tryhackme.username})
+              </a>
+              .
+            </p>
             <a
               href={profile.tryhackme.profile_url}
               target="_blank"

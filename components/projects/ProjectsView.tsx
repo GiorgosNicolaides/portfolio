@@ -7,7 +7,10 @@ import { cn } from '@/lib/utils'
 
 type Filter = 'all' | ProjectCategory
 
-const filters: Filter[] = ['all', ...(Object.keys(categoryLabels) as ProjectCategory[])]
+const filters: Filter[] = [
+  'all',
+  ...(Object.keys(categoryLabels) as ProjectCategory[]).filter(c => projects.some(p => p.category === c)),
+]
 
 export default function ProjectsView() {
   const [filter, setFilter] = useState<Filter>('all')

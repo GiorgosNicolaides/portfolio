@@ -26,8 +26,8 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '10+', label: 'security & DevOps tools shipped' },
-  { value: '14', label: 'CIS AWS controls automated' },
+  { value: '11', label: 'documented projects on GitHub' },
+  { value: '10/10', label: 'BSc thesis grade' },
   { value: '5', label: 'vendor certifications (Sophos, Kaseya)' },
   { value: '1,807×', label: 'faster keygen vs RSA-2048 (LEO research)' },
 ]
@@ -148,13 +148,21 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
+    kind: 'work',
+    title: 'Freelance Developer',
+    org: 'Self-employed, part-time',
+    place: 'Remote',
+    period: 'Ongoing',
+    points: ['Occasional side projects for clients, mainly web apps and AI agents that automate workflows'],
+  },
+  {
     kind: 'education',
     title: 'Master of Engineering, Cybersecurity',
     org: 'University of Limerick',
     place: 'Ireland',
     period: 'Sep 2025 – Aug 2026',
     points: [
-      'Thesis: Securing RFID/NFC Technologies in Resource-Constrained IoT Environments (SONDA-MA)',
+      'Thesis (grade A2): Securing RFID/NFC Technologies in Resource-Constrained IoT Environments (SONDA-MA)',
       'Security Protocols: designed and benchmarked an ECDSA authentication protocol for LEO satellite IoT',
     ],
   },
