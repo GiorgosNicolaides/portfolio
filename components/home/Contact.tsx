@@ -7,10 +7,10 @@ export default function Contact() {
       <div className="relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 via-panel to-sky/10 px-6 py-14 text-center sm:px-12">
         <div className="eyebrow mb-4">Let&apos;s talk</div>
         <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
-          Looking for a DevOps or security engineer who automates the secure path?
+          Hiring for a junior DevOps or security role?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-text-muted">
-          I&apos;m open to DevOps, DevSecOps, cloud security and SOC roles, on-site or hybrid in Cyprus or remote. I&apos;m happy to talk through any of these projects in detail.
+          I&apos;m looking for an entry-level role in DevOps, DevSecOps or security, on-site or hybrid in Cyprus or remote. I&apos;d be glad to talk through my projects and what I&apos;m learning.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a href={`mailto:${profile.email}`} className="btn-primary">

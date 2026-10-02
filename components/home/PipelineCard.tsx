@@ -88,7 +88,7 @@ export default function PipelineCard() {
       </ol>
 
       <div className="border-t border-border-subtle bg-panel-2 px-4 py-2.5 font-mono text-[11px] text-text-muted">
-        Every stage above is a tool I built, configured or use daily. See the{' '}
+        Each stage maps to one of my projects or tools I use. See the{' '}
         <Link href="/projects" className="text-accent hover:underline">
           projects
         </Link>

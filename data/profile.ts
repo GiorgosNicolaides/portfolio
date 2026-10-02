@@ -1,13 +1,13 @@
 export const profile = {
   name: 'Georgios Nicolaides',
   shortName: 'George Nicolaides',
-  headline: 'DevSecOps & Cloud Security Engineer',
+  headline: 'Junior Cybersecurity & DevOps Engineer',
   currentRole: { title: 'Service Desk Engineer', company: 'CDMA Services Ltd.' },
-  targetRoles: ['DevOps Engineer', 'DevSecOps Engineer', 'Cloud Security', 'Security Engineer / SOC'],
+  targetRoles: ['Junior DevOps / DevSecOps', 'Junior Security Engineer', 'SOC Analyst'],
   pitch:
-    'I build security into the delivery pipeline and use AI agents to ship it faster. My work covers CI/CD security gates, cloud misconfiguration auditing, containerised services and log-based threat detection, all written, tested and shipped as working tools.',
+    "I'm early in my career and I know where I want to go: security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work on a service desk.",
   summary:
-    'MEng Cybersecurity graduate (University of Limerick) and BSc Informatics & Telematics (Harokopio University, thesis graded 10/10), currently a Service Desk Engineer at CDMA Services. My work sits between operations and security: I automate infrastructure with Ansible, Docker and Kubernetes, put scanners and policy checks into pipelines, and build the detection and response tooling a SOC team relies on. I work AI-first, using Claude Code and Copilot with my own prompts and review skills to build, test and review code. I also do applied cryptography research, including a lightweight RFID/NFC mutual-authentication protocol that I formally verified with ProVerif.',
+    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Service Desk Engineer at CDMA Services. I'm looking for a junior role in DevOps, DevSecOps or security engineering, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   workModes: ['On-site / hybrid in Cyprus', 'Remote'],
@@ -54,7 +54,7 @@ export const pillars: Pillar[] = [
   {
     title: 'AI & Agentic Automation',
     icon: 'spark',
-    description: 'Using AI agents as a force multiplier, with a human checking the output.',
+    description: 'Using AI tools to learn and build faster, and checking what they produce.',
     points: [
       'Agentic coding with Claude Code to build and test the tools on this site',
       'Reusable prompts, CLAUDE.md files, skills and security review checklists',
@@ -109,51 +109,18 @@ export const pillars: Pillar[] = [
 ]
 
 export const skillGroups: { name: string; skills: string[] }[] = [
+  { name: 'DevOps', skills: ['Docker', 'Ansible', 'Jenkins', 'Azure', 'Linux', 'Git'] },
   {
-    name: 'Cloud & Infrastructure as Code',
-    skills: ['AWS (S3 · IAM · EC2/SG)', 'Boto3', 'LocalStack', 'Azure VMs', 'Ansible', 'Vagrant', 'Linux hardening'],
+    name: 'Security',
+    skills: ['SIEM (ELK, Splunk)', 'MITRE ATT&CK', 'SAST (Semgrep, Bandit)', 'Dependency & secret scanning', 'Burp Suite', 'Nmap', 'Wireshark', 'GDPR'],
   },
+  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API'] },
   {
-    name: 'Containers & Orchestration',
-    skills: ['Docker', 'Docker Compose', 'Kubernetes', 'Ingress + cert-manager TLS', 'Nginx', 'GHCR'],
+    name: 'IT Operations',
+    skills: ['Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos', 'Networking (TCP/IP, DNS, VPN)'],
   },
-  {
-    name: 'CI/CD & Automation',
-    skills: ['GitHub Actions', 'Jenkins Pipelines', 'Security gating', 'Bash', 'Make', 'pytest'],
-  },
-  {
-    name: 'AI & Agentic Tooling',
-    skills: [
-      'Claude Code',
-      'Claude API',
-      'OpenAI API',
-      'GitHub Copilot',
-      'Prompt & skill engineering',
-      'AI-assisted code review',
-      'scikit-learn',
-      'News-fetching agent (in progress)',
-    ],
-  },
-  {
-    name: 'Security Tooling',
-    skills: ['OSV.dev', 'Semgrep', 'Bandit', 'Burp Suite', 'Nmap', 'Wireshark', 'VirusTotal API', 'ProVerif', 'Flipper Zero'],
-  },
-  {
-    name: 'Detection & Response',
-    skills: ['SIEM (ELK, Splunk)', 'Log analysis', 'MITRE ATT&CK', 'NIST SP 800-61', 'CIS Benchmarks', 'NIST CSF'],
-  },
-  {
-    name: 'IT Operations & Endpoint',
-    skills: ['Microsoft 365', 'Entra ID', 'Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos Endpoint', 'L1 service desk'],
-  },
-  {
-    name: 'AppSec & Identity',
-    skills: ['Zero Trust', 'JWT', 'RBAC', 'OAuth 2.0', 'Spring Security', 'Secure SDLC', 'CWE / OWASP'],
-  },
-  {
-    name: 'Languages & Frameworks',
-    skills: ['Python', 'Bash', 'C', 'Java', 'TypeScript', 'SQL', 'FastAPI', 'Node.js / Express', 'Next.js / React', 'Spring Boot', 'PostgreSQL'],
-  },
+  { name: 'Programming', skills: ['Python', 'Bash', 'C', 'C++', 'Java', 'TypeScript / JavaScript', 'SQL'] },
+  { name: 'Frameworks', skills: ['React', 'Next.js', 'Node.js', 'FastAPI'] },
 ]
 
 export interface TimelineItem {

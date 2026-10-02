@@ -10,8 +10,8 @@ export default function FeaturedProjects() {
       <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
         <SectionHeader
           eyebrow="Selected work"
-          title="Projects that ship"
-          subtitle="Complete, documented and tested tools, most of them containerised. Each one has a write-up covering the problem, the approach and the result."
+          title="Projects"
+          subtitle="The projects I've built to learn, each with a write-up covering the problem, my approach and what I learned. The code and full documentation are on GitHub."
           className="mb-0"
         />
         <Link href="/projects" className="btn-secondary shrink-0">

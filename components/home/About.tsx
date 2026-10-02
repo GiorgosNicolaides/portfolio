@@ -25,7 +25,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr]">
         <div>
-          <SectionHeader eyebrow="About" title="Operations mindset, attacker's eye" className="mb-6" />
+          <SectionHeader eyebrow="About" title="Where I am and where I'm heading" className="mb-6" />
           <p className="leading-relaxed text-text-muted">{profile.summary}</p>
         </div>
 
