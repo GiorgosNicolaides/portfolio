@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Georgios Nicolaides – CV</title>
 <meta name="author" content="Georgios Nicolaides">
-<meta name="description" content="CV – DevSecOps & Cloud Security Engineer">
+<meta name="description" content="CV – Cybersecurity & DevOps Engineer">
 <style>
   @font-face { font-family: 'Inter'; font-weight: 400; src: url('fonts/inter-latin-400-normal.woff2') format('woff2'); }
   @font-face { font-family: 'Inter'; font-weight: 500; src: url('fonts/inter-latin-500-normal.woff2') format('woff2'); }
@@ -24,7 +24,7 @@
   .contact.links { margin-top: 1pt; }
   .contact span + span::before { content: "·"; margin: 0 6pt; color: #9ca3af; }
 
-  h2 { font-size: 9.2pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+  h2 { font-size: 10pt; font-weight: 700; letter-spacing: 0; text-transform: uppercase; color: var(--accent);
        border-bottom: 0.8pt solid var(--rule); padding-bottom: 2.5pt; margin: 11pt 0 6pt; }
 
   .item { margin-bottom: 7pt; }
@@ -48,10 +48,12 @@
 
 <header>
   <h1>Georgios Nicolaides</h1>
-  <div class="role">DevSecOps &amp; Cloud Security Engineer</div>
+  <div class="role">Cybersecurity &amp; DevOps Engineer</div>
   <div class="contact">
     <span>+357 95700500</span>
     <span><a href="mailto:gnicolaides02@gmail.com">gnicolaides02@gmail.com</a></span>
+    <span>Cypriot citizen</span>
+    <span>Military service completed</span>
   </div>
   <div class="contact links">
     <span><a href="https://georgiosnicolaides.vercel.app">georgiosnicolaides.vercel.app</a></span>
@@ -119,7 +121,7 @@
   <h2>Skills</h2>
   <dl class="skills">
     <dt>DevOps</dt><dd>Docker, Ansible, Jenkins, Azure, Linux, Git</dd>
-    <dt>Security</dt><dd>SIEM (ELK, Splunk), MITRE ATT&amp;CK, SAST (Semgrep, Bandit), dependency &amp; secret scanning, Burp Suite, Nmap, Wireshark</dd>
+    <dt>Security</dt><dd>SIEM (ELK, Splunk), MITRE ATT&amp;CK, SAST (Semgrep, Bandit), dependency &amp; secret scanning, Burp Suite, Nmap, Wireshark, GDPR</dd>
     <dt>AI &amp; Automation</dt><dd>Claude Code, Claude &amp; OpenAI APIs</dd>
     <dt>IT Operations</dt><dd>Autotask PSA, IT Glue, Datto RMM, Sophos, networking (TCP/IP, DNS, VPN)</dd>
     <dt>Programming</dt><dd>Python, Bash, C, C++, Java, TypeScript/JavaScript, SQL</dd>
@@ -139,14 +141,14 @@
     </ul>
   </div>
   <div class="item">
-    <div class="title">Cloud Misconfiguration Auditor</div>
-    <div class="stack">Python · Boto3 · AWS · LocalStack · Docker Compose</div>
+    <div class="title">Zero Trust Identity Dashboard</div>
+    <div class="stack">Node.js · Express · Next.js · JWT · SQLite · Docker</div>
     <ul>
-      <li>Automates 14 CIS AWS Foundations checks across S3, IAM and Security Groups, with severity-ranked findings served from an API.</li>
+      <li>Default-deny access control that checks role, time of day and source IP on every request, with JWTs kept out of the browser in httpOnly cookies and every decision written to an audit log.</li>
     </ul>
   </div>
   <p class="note">
-    More projects, covering cloud security, detection engineering, Kubernetes delivery and applied cryptography, are documented in
+    More projects, covering cloud auditing, threat detection, CI/CD delivery and applied cryptography, are documented in
     detail on <a href="https://github.com/GiorgosNicolaides">GitHub</a> and on my portfolio at
     <a href="https://georgiosnicolaides.vercel.app">georgiosnicolaides.vercel.app</a>.
   </p>
