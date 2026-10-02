@@ -1,7 +1,6 @@
-export type ProjectCategory = 'software' | 'devsecops' | 'cloud' | 'detection' | 'appsec' | 'research'
+export type ProjectCategory = 'devsecops' | 'cloud' | 'detection' | 'appsec' | 'research'
 
 export const categoryLabels: Record<ProjectCategory, string> = {
-  software: 'Software Engineering',
   devsecops: 'DevSecOps & CI/CD',
   cloud: 'Cloud & Infrastructure',
   detection: 'Detection & Response',
@@ -29,33 +28,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    slug: 'retail-catalogue-platform',
-    title: 'Retail Catalogue & Admin Platform',
-    tagline: 'A full-stack storefront with an admin dashboard, built as a separate Next.js frontend and REST API.',
-    category: 'software',
-    year: '2026',
-    featured: true,
-    github: 'https://github.com/GiorgosNicolaides/pasyky_frontend',
-    stack: ['TypeScript', 'Next.js', 'React', 'Prisma', 'PostgreSQL', 'Zod', 'Upstash Redis', 'Cloudinary', 'Resend'],
-    metrics: [
-      { value: '6', label: 'product categories with their own spec schemas' },
-      { value: '2', label: 'apps: storefront + API' },
-      { value: '3', label: 'rate-limited endpoints' },
-    ],
-    problem:
-      'Small retailers often want an online catalogue their staff can update themselves, with product listings, offers and stock levels, without running a full e-commerce platform.',
-    solution:
-      'A public Next.js storefront (catalogue, offers, stock, contact) and a separate Next.js API with an admin dashboard for managing products. Data lives in PostgreSQL through Prisma, images go to Cloudinary through signed uploads, and contact-form messages are sent by email with Resend. The backend API code is private.',
-    highlights: [
-      'Prisma schema with migrations and indexes for the queries the storefront actually runs',
-      'Each product category has its own Zod schema for its spec sheet, so a knife and a jacket store the right fields',
-      'Admin sessions use JWTs (jose) in httpOnly cookies, with bcrypt-hashed passwords',
-      'Login, contact and upload endpoints are rate limited with Upstash Redis, which still works on serverless',
-      'Upload requests are validated before they are signed, so non-images or oversized files never reach Cloudinary',
-      'Admin actions and login attempts go to an append-only audit log, and the frontend sets a Content Security Policy',
-    ],
-  },
   {
     slug: 'devsecops-scanner',
     title: 'DevSecOps Pipeline Scanner',
@@ -173,7 +145,7 @@ export const projects: Project[] = [
     tagline: 'A default-deny policy engine that checks identity, time and network context on every request.',
     category: 'appsec',
     year: '2026',
-    featured: false,
+    featured: true,
     github: 'https://github.com/GiorgosNicolaides/zero-trust-dashboard',
     learnHref: '/learn/zero-trust',
     stack: ['Node.js', 'Express', 'Next.js', 'JWT', 'bcrypt', 'SQLite', 'Docker'],
