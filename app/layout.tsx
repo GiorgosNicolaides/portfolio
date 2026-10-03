@@ -7,7 +7,7 @@ import BackToTop from '@/components/ui/BackToTop'
 import { Analytics } from '@vercel/analytics/react'
 import { profile } from '@/data/profile'
 
-const siteUrl = 'https://georgiosnicolaides.vercel.app'
+const siteUrl = 'https://gnicolaides.vercel.app'
 const title = `${profile.name} | ${profile.headline}`
 const description =
   'Early-career software, security and DevOps engineer looking for junior roles. MEng Cybersecurity (University of Limerick). Documented projects in DevSecOps, detection and applied cryptography.'
