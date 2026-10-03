@@ -38,7 +38,7 @@ export default function OpengraphImage() {
           >
             GN
           </div>
-          <div style={{ fontSize: 26, color: '#8b98ad' }}>georgiosnicolaides.vercel.app</div>
+          <div style={{ fontSize: 26, color: '#8b98ad' }}>gnicolaides.vercel.app</div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontSize: 76, fontWeight: 800, letterSpacing: -2 }}>{profile.name}</div>

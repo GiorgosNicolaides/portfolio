@@ -1,157 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/</loc>
+    <loc>https://gnicolaides.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects</loc>
+    <loc>https://gnicolaides.vercel.app/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/devsecops-scanner</loc>
+    <loc>https://gnicolaides.vercel.app/projects/devsecops-scanner</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/cloud-auditor</loc>
+    <loc>https://gnicolaides.vercel.app/projects/cloud-auditor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/threat-detection-engine</loc>
+    <loc>https://gnicolaides.vercel.app/projects/threat-detection-engine</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/devops-cicd-pipeline</loc>
+    <loc>https://gnicolaides.vercel.app/projects/devops-cicd-pipeline</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/zero-trust-dashboard</loc>
+    <loc>https://gnicolaides.vercel.app/projects/zero-trust-dashboard</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/ir-simulator</loc>
+    <loc>https://gnicolaides.vercel.app/projects/ir-simulator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/covsaw</loc>
+    <loc>https://gnicolaides.vercel.app/projects/covsaw</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/malware-detection-scanner</loc>
+    <loc>https://gnicolaides.vercel.app/projects/malware-detection-scanner</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/sonda-ma</loc>
+    <loc>https://gnicolaides.vercel.app/projects/sonda-ma</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/leo-auth-protocol</loc>
+    <loc>https://gnicolaides.vercel.app/projects/leo-auth-protocol</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/projects/agri-coop</loc>
+    <loc>https://gnicolaides.vercel.app/projects/agri-coop</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn</loc>
+    <loc>https://gnicolaides.vercel.app/learn</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/cloud-audit</loc>
+    <loc>https://gnicolaides.vercel.app/learn/cloud-audit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/devsecops</loc>
+    <loc>https://gnicolaides.vercel.app/learn/devsecops</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/ir-kill-chain</loc>
+    <loc>https://gnicolaides.vercel.app/learn/ir-kill-chain</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/jwt</loc>
+    <loc>https://gnicolaides.vercel.app/learn/jwt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/log-anomaly</loc>
+    <loc>https://gnicolaides.vercel.app/learn/log-anomaly</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/merkle-trees</loc>
+    <loc>https://gnicolaides.vercel.app/learn/merkle-trees</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/mitre-attack</loc>
+    <loc>https://gnicolaides.vercel.app/learn/mitre-attack</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/oauth</loc>
+    <loc>https://gnicolaides.vercel.app/learn/oauth</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/osint</loc>
+    <loc>https://gnicolaides.vercel.app/learn/osint</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/privilege-escalation</loc>
+    <loc>https://gnicolaides.vercel.app/learn/privilege-escalation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/public-key-crypto</loc>
+    <loc>https://gnicolaides.vercel.app/learn/public-key-crypto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/rbac</loc>
+    <loc>https://gnicolaides.vercel.app/learn/rbac</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/replay-attacks</loc>
+    <loc>https://gnicolaides.vercel.app/learn/replay-attacks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/rfid-nfc</loc>
+    <loc>https://gnicolaides.vercel.app/learn/rfid-nfc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/sql-injection</loc>
+    <loc>https://gnicolaides.vercel.app/learn/sql-injection</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/xss</loc>
+    <loc>https://gnicolaides.vercel.app/learn/xss</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://georgiosnicolaides.vercel.app/learn/zero-trust</loc>
+    <loc>https://gnicolaides.vercel.app/learn/zero-trust</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
