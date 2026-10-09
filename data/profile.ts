@@ -239,7 +239,7 @@ export const certifications: Certification[] = [
     issuer: 'Kaseya',
     issued: 'Sep 2026',
     expires: 'Sep 2028',
-    href: 'https://app.diplomasafe.com/en-US/s/98024f72/7d1f1b8d',
+    href: 'https://app.diplomasafe.com/en-US/certificates/d17322b38e1028b74d7f41c2ba17b62cebbcdff59',
     linkLabel: 'Verify',
   },
   {
@@ -247,7 +247,7 @@ export const certifications: Certification[] = [
     issuer: 'Kaseya',
     issued: 'Sep 2026',
     expires: 'Sep 2028',
-    href: 'https://app.diplomasafe.com/en-US/s/823a1fea/4e2324fe',
+    href: 'https://app.diplomasafe.com/en-US/certificates/d999912cab013a869cb0527458c41fae7a53ae639',
     linkLabel: 'Verify',
   },
   {
@@ -255,7 +255,7 @@ export const certifications: Certification[] = [
     issuer: 'Kaseya',
     issued: 'Sep 2026',
     expires: 'Sep 2028',
-    href: 'https://app.diplomasafe.com/en-US/s/92efc9e5/5fd70575',
+    href: 'https://app.diplomasafe.com/en-US/certificates/db480b7c5d451c5453d92ef0a7d06085684c7e52c',
     linkLabel: 'Verify',
   },
   {
