@@ -28,7 +28,7 @@ export const profile = {
 export const stats = [
   { value: '11', label: 'documented projects on GitHub' },
   { value: '10/10', label: 'BSc thesis grade' },
-  { value: '6', label: 'vendor certifications (Sophos, Kaseya)' },
+  { value: '7', label: 'vendor certifications (Sophos, Kaseya)' },
   { value: '1,807×', label: 'faster keygen vs RSA-2048 (LEO research)' },
 ]
 
@@ -92,7 +92,7 @@ export const pillars: Pillar[] = [
       'L1 service desk support for client organisations',
       'Microsoft 365 and Entra ID user, licence and access administration',
       'Kaseya stack: Autotask PSA, IT Glue, Datto RMM',
-      'Sophos Endpoint Engineer and Workspace Protection certified',
+      'Sophos Endpoint Architect, Endpoint Engineer and Workspace Protection certified',
     ],
   },
   {
@@ -210,6 +210,14 @@ export interface Certification {
 }
 
 export const certifications: Certification[] = [
+  {
+    name: 'Sophos Endpoint Architect',
+    issuer: 'Sophos (Credly)',
+    issued: 'Sep 2026',
+    expires: 'May 2027',
+    href: 'https://www.credly.com/badges/3db34095-4922-43d3-a415-21c197e6e345/public_url',
+    linkLabel: 'Verify',
+  },
   {
     name: 'Sophos Endpoint Engineer (ET15)',
     issuer: 'Sophos Academy',
