@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { certifications, profile, timeline } from '@/data/profile'
 import { projects } from '@/data/projects'
 import SectionHeader from '@/components/ui/SectionHeader'
-import { ArrowRightIcon, BookIcon, BriefcaseIcon, CapIcon, ShieldIcon, UsersIcon } from '@/components/ui/Icons'
+import { ArrowRightIcon, BookIcon, BriefcaseIcon, CapIcon, ExternalIcon, ShieldIcon, UsersIcon } from '@/components/ui/Icons'
 import { cn } from '@/lib/utils'
 
 const research = projects.filter(p => p.category === 'research')
@@ -65,26 +65,24 @@ export default function Experience() {
             <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
               <ShieldIcon size={16} className="text-accent" /> Certifications
             </div>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {certifications.map(c => (
-                <li key={c.name} className="flex items-center justify-between gap-3">
+                <li key={c.name} className="flex items-start justify-between gap-3">
                   <div>
-                    <div className="text-sm text-text-primary">
-                      {c.href ? (
-                        <a href={c.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
-                          {c.name}
-                        </a>
-                      ) : (
-                        c.name
-                      )}
+                    <div className="text-sm leading-snug text-text-primary">{c.name}</div>
+                    <div className="mt-0.5 text-xs text-text-muted">
+                      {c.issuer} · {c.issued} · valid to {c.expires}
                     </div>
-                    <div className="text-xs text-text-muted">{c.issuer}</div>
                   </div>
-                  {c.year && (
-                    <span className="shrink-0 rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent">
-                      {c.year}
-                    </span>
-                  )}
+                  <a
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${c.linkLabel} ${c.name}`}
+                    className="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[11px] text-accent transition-colors hover:bg-accent/20"
+                  >
+                    {c.linkLabel} <ExternalIcon size={11} />
+                  </a>
                 </li>
               ))}
             </ul>

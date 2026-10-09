@@ -28,7 +28,7 @@ export const profile = {
 export const stats = [
   { value: '11', label: 'documented projects on GitHub' },
   { value: '10/10', label: 'BSc thesis grade' },
-  { value: '5', label: 'vendor certifications (Sophos, Kaseya)' },
+  { value: '7', label: 'vendor certifications (Sophos, Kaseya)' },
   { value: '1,807×', label: 'faster keygen vs RSA-2048 (LEO research)' },
 ]
 
@@ -92,7 +92,7 @@ export const pillars: Pillar[] = [
       'L1 service desk support for client organisations',
       'Microsoft 365 and Entra ID user, licence and access administration',
       'Kaseya stack: Autotask PSA, IT Glue, Datto RMM',
-      'Sophos-certified endpoint and workspace protection',
+      'Sophos Endpoint Architect, Endpoint Engineer and Workspace Protection certified',
     ],
   },
   {
@@ -203,14 +203,67 @@ export const timeline: TimelineItem[] = [
 export interface Certification {
   name: string
   issuer: string
-  year?: string
-  href?: string
+  issued: string
+  expires: string
+  href: string
+  linkLabel: 'Verify' | 'View'
 }
 
 export const certifications: Certification[] = [
-  { name: 'Sophos Certified Endpoint Engineer', issuer: 'Sophos', year: '2026' },
-  { name: 'Sophos Workspace Protection', issuer: 'Sophos', year: '2026' },
-  { name: 'Datto RMM Certified', issuer: 'Kaseya' },
-  { name: 'Autotask PSA Certified', issuer: 'Kaseya' },
-  { name: 'IT Glue Certified', issuer: 'Kaseya' },
+  {
+    name: 'Sophos Endpoint Architect',
+    issuer: 'Sophos (Credly)',
+    issued: 'Sep 2026',
+    expires: 'May 2027',
+    href: 'https://www.credly.com/badges/3db34095-4922-43d3-a415-21c197e6e345/public_url',
+    linkLabel: 'Verify',
+  },
+  {
+    name: 'Sophos Endpoint Engineer (ET15)',
+    issuer: 'Sophos Academy',
+    issued: 'Sep 2026',
+    expires: 'Dec 2027',
+    href: '/certificates/sophos-et15-endpoint-engineer.webp',
+    linkLabel: 'View',
+  },
+  {
+    name: 'Sophos Workspace Protection (ET55)',
+    issuer: 'Sophos Academy',
+    issued: 'Sep 2026',
+    expires: 'Apr 2028',
+    href: '/certificates/sophos-et55-workspace-protection.webp',
+    linkLabel: 'View',
+  },
+  {
+    name: 'Kaseya Certified Technician in Datto RMM',
+    issuer: 'Kaseya',
+    issued: 'Sep 2026',
+    expires: 'Sep 2028',
+    href: 'https://app.diplomasafe.com/en-US/certificates/d17322b38e1028b74d7f41c2ba17b62cebbcdff59',
+    linkLabel: 'Verify',
+  },
+  {
+    name: 'Kaseya Certified Technician in Autotask PSA',
+    issuer: 'Kaseya',
+    issued: 'Sep 2026',
+    expires: 'Sep 2028',
+    href: 'https://app.diplomasafe.com/en-US/certificates/d999912cab013a869cb0527458c41fae7a53ae639',
+    linkLabel: 'Verify',
+  },
+  {
+    name: 'Kaseya Certified Technician in IT Glue',
+    issuer: 'Kaseya',
+    issued: 'Sep 2026',
+    expires: 'Sep 2028',
+    href: 'https://app.diplomasafe.com/en-US/certificates/db480b7c5d451c5453d92ef0a7d06085684c7e52c',
+    linkLabel: 'Verify',
+  },
+  {
+    name: 'Sales Professional Certification for Partners',
+    issuer: 'Sophos Academy',
+    issued: 'Sep 2026',
+    expires: 'May 2027',
+    href: '/certificates/sophos-sales-professional.webp',
+    linkLabel: 'View',
+  },
 ]
