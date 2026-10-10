@@ -124,7 +124,7 @@ export const skillGroups: { name: string; skills: string[] }[] = [
 ]
 
 export interface TimelineItem {
-  kind: 'work' | 'education' | 'leadership'
+  kind: 'work' | 'education' | 'volunteer'
   title: string
   org: string
   place: string
@@ -168,7 +168,21 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    kind: 'leadership',
+    kind: 'education',
+    title: 'BSc Informatics & Telematics',
+    org: 'Harokopio University',
+    place: 'Greece',
+    period: 'Oct 2021 – Jul 2025',
+    points: [
+      'Thesis (graded 10/10): Categorization of Cryptographic Vulnerabilities & Web Security Assessment',
+      'Built COVSAW, a static analyser benchmarked against Semgrep and Bandit',
+    ],
+  },
+]
+
+export const volunteering: TimelineItem[] = [
+  {
+    kind: 'volunteer',
     title: 'Co-Lead',
     org: 'Google Developer Group, Harokopio University',
     place: 'Greece',
@@ -180,23 +194,12 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    kind: 'leadership',
+    kind: 'volunteer',
     title: 'Core Team Developer',
     org: 'Google Developer Student Clubs, Harokopio University',
     place: 'Greece',
     period: 'Sep 2023 – Jul 2024',
     points: ['Built technical resources and helped run workshops on the developer track'],
-  },
-  {
-    kind: 'education',
-    title: 'BSc Informatics & Telematics',
-    org: 'Harokopio University',
-    place: 'Greece',
-    period: 'Oct 2021 – Jul 2025',
-    points: [
-      'Thesis (graded 10/10): Categorization of Cryptographic Vulnerabilities & Web Security Assessment',
-      'Built COVSAW, a static analyser benchmarked against Semgrep and Bandit',
-    ],
   },
 ]
 
