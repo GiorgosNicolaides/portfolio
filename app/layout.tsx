@@ -4,7 +4,7 @@ import { inter, jetbrainsMono } from './fonts'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import BackToTop from '@/components/ui/BackToTop'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 import { profile } from '@/data/profile'
 
 const siteUrl = 'https://gnicolaides.vercel.app'
