@@ -124,7 +124,7 @@ export const skillGroups: { name: string; skills: string[] }[] = [
 ]
 
 export interface TimelineItem {
-  kind: 'work' | 'education' | 'leadership'
+  kind: 'work' | 'education' | 'volunteer'
   title: string
   org: string
   place: string
@@ -152,7 +152,8 @@ export const timeline: TimelineItem[] = [
     title: 'Freelance Developer',
     org: 'Self-employed, part-time',
     place: 'Remote',
-    period: 'Ongoing',
+    period: 'Aug 2026 – Present',
+    current: true,
     points: ['Occasional side projects for clients, mainly web apps and AI agents that automate workflows'],
   },
   {
@@ -167,19 +168,6 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    kind: 'leadership',
-    title: 'Co-Lead',
-    org: 'Google Developer Group, Harokopio University',
-    place: 'Greece',
-    period: 'Sep 2024 – Jul 2025',
-    points: [
-      'Revived a dormant chapter and grew active membership from 5 to 50',
-      'Ran monthly hands-on security workshops: SQL injection, enumeration, privilege escalation, OSINT',
-      'Mentored 6 teams (30+ students) at Hellenic University Hack. All 6 finished in the top 20',
-      'Set up a partnership with NKUA GDG so the community survived institutional restructuring',
-    ],
-  },
-  {
     kind: 'education',
     title: 'BSc Informatics & Telematics',
     org: 'Harokopio University',
@@ -190,8 +178,23 @@ export const timeline: TimelineItem[] = [
       'Built COVSAW, a static analyser benchmarked against Semgrep and Bandit',
     ],
   },
+]
+
+export const volunteering: TimelineItem[] = [
   {
-    kind: 'leadership',
+    kind: 'volunteer',
+    title: 'Co-Lead',
+    org: 'Google Developer Group, Harokopio University',
+    place: 'Greece',
+    period: 'Sep 2024 – Jul 2025',
+    points: [
+      'Revived a dormant chapter and grew active membership from 5 to 50',
+      'Ran monthly hands-on security workshops: SQL injection, enumeration, privilege escalation, OSINT',
+      'Set up a partnership with NKUA GDG so the community survived institutional restructuring',
+    ],
+  },
+  {
+    kind: 'volunteer',
     title: 'Core Team Developer',
     org: 'Google Developer Student Clubs, Harokopio University',
     place: 'Greece',
