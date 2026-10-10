@@ -180,6 +180,14 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
+    kind: 'leadership',
+    title: 'Core Team Developer',
+    org: 'Google Developer Student Clubs, Harokopio University',
+    place: 'Greece',
+    period: 'Sep 2023 – Jul 2024',
+    points: ['Built technical resources and helped run workshops on the developer track'],
+  },
+  {
     kind: 'education',
     title: 'BSc Informatics & Telematics',
     org: 'Harokopio University',
@@ -189,14 +197,6 @@ export const timeline: TimelineItem[] = [
       'Thesis (graded 10/10): Categorization of Cryptographic Vulnerabilities & Web Security Assessment',
       'Built COVSAW, a static analyser benchmarked against Semgrep and Bandit',
     ],
-  },
-  {
-    kind: 'leadership',
-    title: 'Core Team Developer',
-    org: 'Google Developer Student Clubs, Harokopio University',
-    place: 'Greece',
-    period: 'Sep 2023 – Jul 2024',
-    points: ['Built technical resources and helped run workshops on the developer track'],
   },
 ]
 

@@ -31,7 +31,7 @@ export default function Experience() {
               <li key={item.title + item.org} className="relative">
                 <span
                   className={cn(
-                    'absolute -left-[45px] grid h-7 w-7 place-items-center rounded-full border bg-panel text-accent',
+                    'absolute -left-[46.5px] grid h-7 w-7 place-items-center rounded-full border bg-panel text-accent',
                     item.current ? 'border-accent/60 shadow-[0_0_0_4px_rgba(52,211,153,0.12)]' : 'border-border-subtle'
                   )}
                 >
