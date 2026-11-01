@@ -262,11 +262,11 @@ export const certifications: Certification[] = [
     linkLabel: 'Verify',
   },
   {
-    name: 'Sales Professional Certification for Partners',
-    issuer: 'Sophos Academy',
+    name: 'Sophos Sales Professional',
+    issuer: 'Sophos (Credly)',
     issued: 'Sep 2026',
     expires: 'May 2027',
-    href: '/certificates/sophos-sales-professional.webp',
-    linkLabel: 'View',
+    href: 'https://www.credly.com/badges/d3e69afe-d593-4892-a47d-c54f16953b2a/public_url',
+    linkLabel: 'Verify',
   },
 ]
