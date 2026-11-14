@@ -31,9 +31,9 @@ export default function About() {
 
         <dl className="card grid content-start gap-5 p-6 text-sm">
           <div>
-            <dt className="eyebrow mb-2">Target roles</dt>
+            <dt className="eyebrow mb-2">Interests</dt>
             <dd className="flex flex-wrap gap-2">
-              {profile.targetRoles.map(r => (
+              {profile.interests.map(r => (
                 <span key={r} className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
                   {r}
                 </span>
@@ -45,10 +45,6 @@ export default function About() {
             <dd className="text-text-primary">
               {profile.currentRole.title} · {profile.currentRole.company}
             </dd>
-          </div>
-          <div>
-            <dt className="eyebrow mb-1.5">Work mode</dt>
-            <dd className="text-text-primary">{profile.workModes.join(' · ')}</dd>
           </div>
           <div>
             <dt className="eyebrow mb-1.5">Languages</dt>

@@ -16,7 +16,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Looking for junior software, security &amp; DevOps roles
+            Currently at {profile.currentRole.company}
           </div>
 
           <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
@@ -56,13 +56,9 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-muted">
-            <span>{profile.currentRole.title} @ {profile.currentRole.company}</span>
-            <span className="hidden h-1 w-1 rounded-full bg-border-subtle sm:block" />
-            <span>MEng Cybersecurity, University of Limerick (2026)</span>
-            <span className="hidden h-1 w-1 rounded-full bg-border-subtle sm:block" />
-            <span>{profile.location}</span>
-          </div>
+          <p className="mt-10 text-sm text-text-muted">
+            MEng Cybersecurity, University of Limerick · {profile.location}
+          </p>
         </div>
 
         <div className="animate-fadeIn">

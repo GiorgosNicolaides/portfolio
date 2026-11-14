@@ -1,16 +1,15 @@
 export const profile = {
   name: 'Georgios Nicolaides',
   shortName: 'George Nicolaides',
-  headline: 'Junior Software, Security & DevOps Engineer',
-  currentRole: { title: 'Cybersecurity Analyst', company: 'Logicom' },
-  targetRoles: ['Software Engineer', 'Security Engineer', 'DevOps / DevSecOps', 'SOC Analyst'],
+  headline: 'Cybersecurity Analyst',
+  currentRole: { title: 'Cybersecurity Analyst', company: 'Logicom Solutions' },
+  interests: ['Security operations', 'Software engineering', 'DevOps & DevSecOps', 'AI automation'],
   pitch:
     "I'm early in my career and I know what I enjoy: software engineering, security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work as a cybersecurity analyst.",
   summary:
-    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Cybersecurity Analyst at Logicom, after starting out on a service desk at CDMA Services. I'm looking for a junior role in software engineering, security or DevOps, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
+    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Cybersecurity Analyst at Logicom Solutions, after starting out on a service desk at CDMA Services. Security, software engineering and DevOps are the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
-  workModes: ['On-site / hybrid in Cyprus', 'Remote'],
   languages: [
     { name: 'Greek', level: 'Native' },
     { name: 'English', level: 'Fluent' },
@@ -56,6 +55,7 @@ export const pillars: Pillar[] = [
     icon: 'spark',
     description: 'Using AI tools to learn and build faster, and checking what they produce.',
     points: [
+      'Helping implement an agentic SOC with Claude in Google SecOps at work',
       'Agentic coding with Claude Code to build and test the tools on this site',
       'Reusable prompts, CLAUDE.md files, skills and security review checklists',
       'Claude and OpenAI APIs, plus GitHub Copilot in day-to-day work',
@@ -78,7 +78,7 @@ export const pillars: Pillar[] = [
     icon: 'radar',
     description: 'Turning noisy logs into alerts a person can triage quickly.',
     points: [
-      'SOC alert monitoring, investigation and escalation for client environments',
+      'SOC alert investigation and escalation in Google SecOps (SIEM & SOAR)',
       'ML anomaly detection on SSH auth and Apache logs',
       'Incident response playbooks following NIST SP 800-61',
       'MITRE ATT&CK mapping and blue-team endpoint scanning',
@@ -109,13 +109,32 @@ export const pillars: Pillar[] = [
   },
 ]
 
-export const skillGroups: { name: string; skills: string[] }[] = [
+export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] = [
+  {
+    name: 'Security Operations (day job)',
+    wide: true,
+    skills: [
+      'Google SecOps (SIEM & SOAR)',
+      'Microsoft Defender',
+      'CrowdStrike Falcon',
+      'Cisco XDR',
+      'Fortinet',
+      'Palo Alto Networks',
+      'Cisco',
+      'Google Workspace & GCP',
+      'Jira Service Management',
+      'Intelligence X',
+      'Custom monitoring scripts',
+      'Agentic SOC with Claude',
+      'Alert triage & escalation',
+    ],
+  },
   { name: 'DevOps', skills: ['Docker', 'Ansible', 'Jenkins', 'Azure', 'Linux', 'Git'] },
   {
     name: 'Security',
     skills: ['SIEM (ELK, Splunk)', 'MITRE ATT&CK', 'SAST (Semgrep, Bandit)', 'Dependency & secret scanning', 'Burp Suite', 'Nmap', 'Wireshark', 'GDPR'],
   },
-  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API'] },
+  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API', 'Agentic SOC (Claude in Google SecOps)'] },
   {
     name: 'IT Operations',
     skills: ['Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos', 'Networking (TCP/IP, DNS, VPN)'],
@@ -138,14 +157,15 @@ export const timeline: TimelineItem[] = [
   {
     kind: 'work',
     title: 'Cybersecurity Analyst',
-    org: 'Logicom',
+    org: 'Logicom Solutions',
     place: 'Nicosia, Cyprus',
     period: 'Nov 2026 – Present',
     current: true,
     points: [
-      'Monitor and analyse security events, alerts and incidents in client environments, supporting the SOC with detection and response',
-      'Investigate alerts, identify potential threats and escalate incidents following established procedures',
-      'Support the implementation and configuration of cybersecurity solutions, and document incidents, findings and recommendations',
+      'Monitor and investigate security alerts in Google SecOps (SIEM & SOAR) across client environments, including Google Workspace and GCP, using Intelligence X for threat intelligence and custom scripts for monitoring',
+      'Investigate detections from Microsoft Defender, CrowdStrike Falcon and Cisco XDR, and firewall events from Fortinet, Palo Alto and Cisco',
+      'Triage and escalate incidents following established procedures, and document cases, findings and recommendations in Google SecOps SOAR and Jira Service Management',
+      'Part of the team implementing an agentic SOC in Google SecOps with Claude',
     ],
   },
   {
