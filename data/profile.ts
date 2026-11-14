@@ -55,6 +55,7 @@ export const pillars: Pillar[] = [
     icon: 'spark',
     description: 'Using AI tools to learn and build faster, and checking what they produce.',
     points: [
+      'Helping implement an agentic SOC with Claude in Google SecOps at work',
       'Agentic coding with Claude Code to build and test the tools on this site',
       'Reusable prompts, CLAUDE.md files, skills and security review checklists',
       'Claude and OpenAI APIs, plus GitHub Copilot in day-to-day work',
@@ -122,6 +123,9 @@ export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] =
       'Cisco',
       'Google Workspace & GCP',
       'Jira Service Management',
+      'Intelligence X',
+      'Custom monitoring scripts',
+      'Agentic SOC with Claude',
       'Alert triage & escalation',
     ],
   },
@@ -130,7 +134,7 @@ export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] =
     name: 'Security',
     skills: ['SIEM (ELK, Splunk)', 'MITRE ATT&CK', 'SAST (Semgrep, Bandit)', 'Dependency & secret scanning', 'Burp Suite', 'Nmap', 'Wireshark', 'GDPR'],
   },
-  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API'] },
+  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API', 'Agentic SOC (Claude in Google SecOps)'] },
   {
     name: 'IT Operations',
     skills: ['Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos', 'Networking (TCP/IP, DNS, VPN)'],
@@ -158,9 +162,10 @@ export const timeline: TimelineItem[] = [
     period: 'Nov 2026 – Present',
     current: true,
     points: [
-      'Monitor and investigate security alerts in Google SecOps (SIEM & SOAR) across client environments, including Google Workspace and GCP',
+      'Monitor and investigate security alerts in Google SecOps (SIEM & SOAR) across client environments, including Google Workspace and GCP, using Intelligence X for threat intelligence and custom scripts for monitoring',
       'Investigate detections from Microsoft Defender, CrowdStrike Falcon and Cisco XDR, and firewall events from Fortinet, Palo Alto and Cisco',
       'Triage and escalate incidents following established procedures, and document cases, findings and recommendations in Google SecOps SOAR and Jira Service Management',
+      'Part of the team implementing an agentic SOC in Google SecOps with Claude',
     ],
   },
   {
