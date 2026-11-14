@@ -11,7 +11,7 @@
   @font-face { font-family: 'Inter'; font-weight: 600; src: url('fonts/inter-latin-600-normal.woff2') format('woff2'); }
   @font-face { font-family: 'Inter'; font-weight: 700; src: url('fonts/inter-latin-700-normal.woff2') format('woff2'); }
 
-  @page { size: A4; margin: 12mm 14mm; }
+  @page { size: A4; margin: 10mm 14mm 9mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --ink: #111827; --muted: #4b5563; --accent: #0f766e; --rule: #d1d5db; }
   body { font-family: 'Inter', 'Liberation Sans', Arial, sans-serif; font-size: 9.6pt; line-height: 1.4; color: var(--ink); }
@@ -28,7 +28,7 @@
   h2 { font-size: 10pt; font-weight: 700; letter-spacing: 0; text-transform: uppercase; color: var(--accent);
        border-bottom: 0.8pt solid var(--rule); padding-bottom: 2.5pt; margin: 11pt 0 6pt; }
 
-  .item { margin-bottom: 7pt; }
+  .item { margin-bottom: 6pt; }
   .item:last-child { margin-bottom: 0; }
   .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
   .title { font-weight: 600; }
@@ -64,13 +64,21 @@
   <h2>Experience</h2>
   <div class="item">
     <div class="row">
-      <div><span class="title">Service Desk Engineer</span> <span class="org">· CDMA Services Ltd., Nicosia</span></div>
-      <div class="date">Sep 2026 – Present</div>
+      <div><span class="title">Cybersecurity Analyst</span> <span class="org">· Logicom, Nicosia</span></div>
+      <div class="date">Nov 2026 – Present</div>
     </div>
     <ul>
-      <li>Level 1 support across multiple client organisations, handling 5–10 tickets a day from triage and troubleshooting through vendor coordination and escalation.</li>
-      <li>Microsoft 365 and Entra ID administration: user lifecycle, licensing and access.</li>
-      <li>Daily work in the Kaseya stack: Autotask PSA, IT Glue and Datto RMM.</li>
+      <li>Monitor, investigate and escalate security alerts and incidents in client environments as part of the SOC.</li>
+      <li>Support the rollout of cybersecurity solutions and document incidents, findings and recommendations.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row">
+      <div><span class="title">Service Desk Engineer</span> <span class="org">· CDMA Services Ltd., Nicosia</span></div>
+      <div class="date">Sep 2026 – Oct 2026</div>
+    </div>
+    <ul>
+      <li>Level 1 support for multiple clients (5–10 tickets a day): Microsoft 365, Entra ID, Autotask PSA, IT Glue and Datto RMM.</li>
     </ul>
   </div>
   <div class="item">
@@ -146,7 +154,7 @@
     <div class="title">Zero Trust Identity Dashboard</div>
     <div class="stack">Node.js · Express · Next.js · JWT · SQLite · Docker</div>
     <ul>
-      <li>Default-deny access control that checks role, time of day and source IP on every request, with JWTs kept out of the browser in httpOnly cookies and every decision written to an audit log.</li>
+      <li>Default-deny access control that checks role, time of day and source IP on every request, with httpOnly JWT sessions and an audit log.</li>
     </ul>
   </div>
   <p class="note">
