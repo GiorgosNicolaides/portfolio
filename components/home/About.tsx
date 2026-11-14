@@ -25,15 +25,15 @@ export default function About() {
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr]">
         <div>
-          <SectionHeader eyebrow="About" title="Where I am and where I'm heading" className="mb-6" />
+          <SectionHeader eyebrow="About" title="Profile" className="mb-6" />
           <p className="leading-relaxed text-text-muted">{profile.summary}</p>
         </div>
 
         <dl className="card grid content-start gap-5 p-6 text-sm">
           <div>
-            <dt className="eyebrow mb-2">Interests</dt>
+            <dt className="eyebrow mb-2">Areas of focus</dt>
             <dd className="flex flex-wrap gap-2">
-              {profile.interests.map(r => (
+              {profile.focusAreas.map(r => (
                 <span key={r} className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
                   {r}
                 </span>

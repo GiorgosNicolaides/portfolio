@@ -135,8 +135,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
 
       {project.team && (
         <p className="mt-10 rounded-lg border border-sky/30 bg-sky/5 p-4 text-sm text-text-muted">
-          This was a team project built for a university course and later refined for this portfolio. I&apos;m happy to
-          go through my own contributions in detail.
+          Team project developed for a university course and later refined for this portfolio. Details of my individual contributions are available on request.
         </p>
       )}
 

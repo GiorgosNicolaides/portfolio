@@ -10,7 +10,7 @@ import { profile } from '@/data/profile'
 const siteUrl = 'https://gnicolaides.vercel.app'
 const title = `${profile.name} | ${profile.headline}`
 const description =
-  'Cybersecurity analyst at Logicom Solutions with an MEng in Cybersecurity (University of Limerick). Documented projects in DevSecOps, detection and applied cryptography.'
+  'Cybersecurity Analyst at Logicom Solutions, specialising in security operations, DevSecOps and applied cryptography. MEng Cybersecurity, University of Limerick.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

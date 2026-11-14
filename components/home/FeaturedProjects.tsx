@@ -11,7 +11,7 @@ export default function FeaturedProjects() {
         <SectionHeader
           eyebrow="Selected work"
           title="Projects"
-          subtitle="The projects I've built to learn, each with a write-up covering the problem, my approach and what I learned. The code and full documentation are on GitHub."
+          subtitle="Security and engineering projects, each documented with the problem, approach and outcome. Source code and full documentation are available on GitHub."
           className="mb-0"
         />
         <Link href="/projects" className="btn-secondary shrink-0">

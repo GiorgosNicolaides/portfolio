@@ -3,11 +3,11 @@ export const profile = {
   shortName: 'George Nicolaides',
   headline: 'Cybersecurity Analyst',
   currentRole: { title: 'Cybersecurity Analyst', company: 'Logicom Solutions' },
-  interests: ['Security operations', 'Software engineering', 'DevOps & DevSecOps', 'AI automation'],
+  focusAreas: ['Security operations', 'Threat detection & response', 'DevSecOps', 'AI-driven automation'],
   pitch:
-    "I'm early in my career and I know what I enjoy: software engineering, security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work as a cybersecurity analyst.",
+    "Specialising in security operations: alert investigation, incident triage and the rollout of an agentic SOC on Google SecOps, backed by a foundation in DevSecOps, secure software engineering and applied cryptography.",
   summary:
-    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Cybersecurity Analyst at Logicom Solutions, after starting out on a service desk at CDMA Services. Security, software engineering and DevOps are the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
+    "I am a Cybersecurity Analyst at Logicom Solutions, where I monitor and investigate security alerts across client environments in Google SecOps (SIEM & SOAR), working with telemetry from Microsoft Defender, CrowdStrike Falcon, Cisco XDR and Fortinet, Palo Alto and Cisco firewalls. I am also part of the team implementing an agentic SOC with Claude. I hold an MEng in Cybersecurity from the University of Limerick (thesis grade A2) and a BSc in Informatics & Telematics from Harokopio University (thesis graded 10/10). Alongside my role, I build and document security tooling covering CI/CD security gates, cloud configuration auditing, log-based threat detection and Zero Trust access control, and I research lightweight authentication protocols.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   languages: [
@@ -42,7 +42,7 @@ export const pillars: Pillar[] = [
   {
     title: 'DevSecOps & CI/CD',
     icon: 'pipeline',
-    description: 'Shift-left security that runs on every push, not once a quarter.',
+    description: 'Security controls embedded in every build and release.',
     points: [
       'GitHub Actions and Jenkins pipelines with security gates',
       'Dependency CVE scanning (OSV.dev) and secret detection',
@@ -53,19 +53,19 @@ export const pillars: Pillar[] = [
   {
     title: 'AI & Agentic Automation',
     icon: 'spark',
-    description: 'Using AI tools to learn and build faster, and checking what they produce.',
+    description: 'Applying AI agents to security operations and engineering, with human review of every output.',
     points: [
       'Helping implement an agentic SOC with Claude in Google SecOps at work',
       'Agentic coding with Claude Code to build and test the tools on this site',
       'Reusable prompts, CLAUDE.md files, skills and security review checklists',
-      'Claude and OpenAI APIs, plus GitHub Copilot in day-to-day work',
+      'Claude and OpenAI API integrations',
       'ML anomaly detection (Isolation Forest) in production-style APIs',
     ],
   },
   {
     title: 'Cloud & Infrastructure',
     icon: 'cloud',
-    description: 'Reproducible infrastructure that follows hardening baselines.',
+    description: 'Reproducible infrastructure aligned with hardening baselines.',
     points: [
       'AWS S3, IAM and Security Group auditing against CIS Benchmarks',
       'Ansible playbooks for provisioning and deployment',
@@ -76,7 +76,7 @@ export const pillars: Pillar[] = [
   {
     title: 'Detection & Response',
     icon: 'radar',
-    description: 'Turning noisy logs into alerts a person can triage quickly.',
+    description: 'Turning high-volume telemetry into actionable, well-triaged alerts.',
     points: [
       'SOC alert investigation and escalation in Google SecOps (SIEM & SOAR)',
       'ML anomaly detection on SSH auth and Apache logs',
@@ -88,7 +88,7 @@ export const pillars: Pillar[] = [
   {
     title: 'IT Operations & Endpoint',
     icon: 'desk',
-    description: 'Day-to-day experience running real client environments.',
+    description: 'Operational experience supporting client environments.',
     points: [
       'L1 service desk support for client organisations',
       'Microsoft 365 and Entra ID user, licence and access administration',
@@ -99,10 +99,10 @@ export const pillars: Pillar[] = [
   {
     title: 'Identity & Applied Crypto',
     icon: 'lock',
-    description: 'Access control and protocols built so they fail closed.',
+    description: 'Access control and authentication protocols designed to fail closed.',
     points: [
       'Zero Trust policy engines with default deny',
-      'JWT, RBAC, OAuth 2.0 and bcrypt done properly',
+      'Secure implementation of JWT, RBAC, OAuth 2.0 and bcrypt',
       'Protocols designed and checked with ProVerif',
       'ECDSA vs RSA performance engineering',
     ],
@@ -187,7 +187,7 @@ export const timeline: TimelineItem[] = [
     place: 'Remote',
     period: 'Aug 2026 – Present',
     current: true,
-    points: ['Occasional side projects for clients, mainly web apps and AI agents that automate workflows'],
+    points: ['Occasional client projects, mainly web applications and AI agents for workflow automation'],
   },
   {
     kind: 'education',
