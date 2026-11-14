@@ -77,7 +77,7 @@ export const pillars: Pillar[] = [
     icon: 'radar',
     description: 'Turning noisy logs into alerts a person can triage quickly.',
     points: [
-      'SOC alert monitoring, investigation and escalation for client environments',
+      'SOC alert investigation and escalation in Google SecOps (SIEM & SOAR)',
       'ML anomaly detection on SSH auth and Apache logs',
       'Incident response playbooks following NIST SP 800-61',
       'MITRE ATT&CK mapping and blue-team endpoint scanning',
@@ -108,7 +108,23 @@ export const pillars: Pillar[] = [
   },
 ]
 
-export const skillGroups: { name: string; skills: string[] }[] = [
+export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] = [
+  {
+    name: 'Security Operations (day job)',
+    wide: true,
+    skills: [
+      'Google SecOps (SIEM & SOAR)',
+      'Microsoft Defender',
+      'CrowdStrike Falcon',
+      'Cisco XDR',
+      'Fortinet',
+      'Palo Alto Networks',
+      'Cisco',
+      'Google Workspace & GCP',
+      'Jira Service Management',
+      'Alert triage & escalation',
+    ],
+  },
   { name: 'DevOps', skills: ['Docker', 'Ansible', 'Jenkins', 'Azure', 'Linux', 'Git'] },
   {
     name: 'Security',
@@ -142,9 +158,9 @@ export const timeline: TimelineItem[] = [
     period: 'Nov 2026 – Present',
     current: true,
     points: [
-      'Monitor and analyse security events, alerts and incidents in client environments, supporting the SOC with detection and response',
-      'Investigate alerts, identify potential threats and escalate incidents following established procedures',
-      'Support the implementation and configuration of cybersecurity solutions, and document incidents, findings and recommendations',
+      'Monitor and investigate security alerts in Google SecOps (SIEM & SOAR) across client environments, including Google Workspace and GCP',
+      'Investigate detections from Microsoft Defender, CrowdStrike Falcon and Cisco XDR, and firewall events from Fortinet, Palo Alto and Cisco',
+      'Triage and escalate incidents following established procedures, and document cases, findings and recommendations in Google SecOps SOAR and Jira Service Management',
     ],
   },
   {

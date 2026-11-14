@@ -1,5 +1,6 @@
 import { skillGroups } from '@/data/profile'
 import SectionHeader from '@/components/ui/SectionHeader'
+import { cn } from '@/lib/utils'
 
 export default function Skills() {
   return (
@@ -12,7 +13,7 @@ export default function Skills() {
         />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map(g => (
-            <div key={g.name} className="card p-5">
+            <div key={g.name} className={cn('card p-5', g.wide && 'sm:col-span-2 lg:col-span-3')}>
               <h3 className="mb-4 text-sm font-semibold text-text-primary">{g.name}</h3>
               <div className="flex flex-wrap gap-1.5">
                 {g.skills.map(s => (

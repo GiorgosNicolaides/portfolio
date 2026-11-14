@@ -14,7 +14,7 @@
   @page { size: A4; margin: 10mm 14mm 9mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --ink: #111827; --muted: #4b5563; --accent: #0f766e; --rule: #d1d5db; }
-  body { font-family: 'Inter', 'Liberation Sans', Arial, sans-serif; font-size: 9.6pt; line-height: 1.4; color: var(--ink); }
+  body { font-family: 'Inter', 'Liberation Sans', Arial, sans-serif; font-size: 9.6pt; line-height: 1.36; color: var(--ink); }
   a { color: inherit; text-decoration: none; }
 
   header { margin-bottom: 4pt; }
@@ -22,11 +22,10 @@
   .role { font-size: 11.5pt; font-weight: 600; color: var(--accent); margin-top: 3pt; }
   .contact { margin-top: 5pt; color: var(--muted); font-size: 9pt; }
   .contact.links { margin-top: 1pt; }
-  .seeking { margin-top: 6pt; font-size: 9.2pt; color: var(--ink); }
   .contact span + span::before { content: "·"; margin: 0 6pt; color: #9ca3af; }
 
   h2 { font-size: 10pt; font-weight: 700; letter-spacing: 0; text-transform: uppercase; color: var(--accent);
-       border-bottom: 0.8pt solid var(--rule); padding-bottom: 2.5pt; margin: 11pt 0 6pt; }
+       border-bottom: 0.8pt solid var(--rule); padding-bottom: 2.5pt; margin: 10pt 0 5pt; }
 
   .item { margin-bottom: 6pt; }
   .item:last-child { margin-bottom: 0; }
@@ -68,8 +67,8 @@
       <div class="date">Nov 2026 – Present</div>
     </div>
     <ul>
-      <li>Monitor, investigate and escalate security alerts and incidents in client environments as part of the SOC.</li>
-      <li>Support the rollout of cybersecurity solutions and document incidents, findings and recommendations.</li>
+      <li>Monitor and investigate security alerts in Google SecOps (SIEM &amp; SOAR) across client environments, including Google Workspace and GCP.</li>
+      <li>Investigate detections from Microsoft Defender, CrowdStrike Falcon and Cisco XDR and firewall events from Fortinet, Palo Alto and Cisco; escalate and document cases in Google SecOps SOAR and Jira.</li>
     </ul>
   </div>
   <div class="item">
@@ -130,10 +129,11 @@
 <section>
   <h2>Skills</h2>
   <dl class="skills">
+    <dt>Security Ops</dt><dd>Google SecOps (SIEM, SOAR), Microsoft Defender, CrowdStrike Falcon, Cisco XDR, Fortinet, Palo Alto, Cisco, Jira Service Management</dd>
     <dt>Programming</dt><dd>Python, Bash, C, C++, Java, TypeScript/JavaScript, SQL</dd>
     <dt>Frameworks</dt><dd>React, Next.js, Node.js, FastAPI</dd>
     <dt>DevOps</dt><dd>Docker, Ansible, Jenkins, Azure, Linux, Git</dd>
-    <dt>Security</dt><dd>SIEM (ELK, Splunk), MITRE ATT&amp;CK, SAST (Semgrep, Bandit), dependency &amp; secret scanning, Burp Suite, Nmap, Wireshark, GDPR</dd>
+    <dt>Security</dt><dd>SIEM (ELK, Splunk), MITRE ATT&amp;CK, SAST (Semgrep, Bandit), Burp Suite, Nmap, Wireshark, GDPR</dd>
     <dt>AI &amp; Automation</dt><dd>Claude Code, Claude &amp; OpenAI APIs</dd>
     <dt>IT Operations</dt><dd>Autotask PSA, IT Glue, Datto RMM, Sophos, networking (TCP/IP, DNS, VPN)</dd>
     <dt>Certifications</dt><dd>Sophos Endpoint Architect, Sophos Endpoint Engineer (ET15), Sophos Workspace Protection (ET55), Kaseya Certified Technician in Datto RMM, Autotask PSA and IT Glue (all 2026)</dd>
@@ -147,21 +147,17 @@
     <div class="title">DevSecOps Pipeline Scanner</div>
     <div class="stack">Python · FastAPI · OSV.dev · GitHub Actions · Docker</div>
     <ul>
-      <li>CI/CD security gate that checks dependencies across four ecosystems for known CVEs, detects hard-coded secrets, and fails the build above a set severity.</li>
+      <li>CI/CD gate that checks dependencies in four ecosystems for CVEs, finds hard-coded secrets and fails risky builds.</li>
     </ul>
   </div>
   <div class="item">
     <div class="title">Zero Trust Identity Dashboard</div>
     <div class="stack">Node.js · Express · Next.js · JWT · SQLite · Docker</div>
     <ul>
-      <li>Default-deny access control that checks role, time of day and source IP on every request, with httpOnly JWT sessions and an audit log.</li>
+      <li>Default-deny access control that checks role, time and source IP on every request, with an audit log.</li>
     </ul>
   </div>
-  <p class="note">
-    More projects, covering cloud auditing, threat detection, CI/CD delivery and applied cryptography, are documented in
-    detail on <a href="https://github.com/GiorgosNicolaides">GitHub</a> and on my portfolio at
-    <a href="https://gnicolaides.vercel.app">gnicolaides.vercel.app</a>.
-  </p>
+  <p class="note">More projects, fully documented, on <a href="https://github.com/GiorgosNicolaides">GitHub</a> and at <a href="https://gnicolaides.vercel.app">gnicolaides.vercel.app</a>.</p>
 </section>
 
 </body>
