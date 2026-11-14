@@ -2,12 +2,12 @@ export const profile = {
   name: 'Georgios Nicolaides',
   shortName: 'George Nicolaides',
   headline: 'Junior Software, Security & DevOps Engineer',
-  currentRole: { title: 'Service Desk Engineer', company: 'CDMA Services Ltd.' },
+  currentRole: { title: 'Cybersecurity Analyst', company: 'Logicom' },
   targetRoles: ['Software Engineer', 'Security Engineer', 'DevOps / DevSecOps', 'SOC Analyst'],
   pitch:
-    "I'm early in my career and I know what I enjoy: software engineering, security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work on a service desk.",
+    "I'm early in my career and I know what I enjoy: software engineering, security and DevOps. I learn by building, so most of what I know comes from the projects below, which I've documented in detail, and from my day-to-day work as a cybersecurity analyst.",
   summary:
-    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Service Desk Engineer at CDMA Services. I'm looking for a junior role in software engineering, security or DevOps, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
+    "I recently finished an MEng in Cybersecurity at the University of Limerick, after a BSc in Informatics & Telematics at Harokopio University, and I now work as a Cybersecurity Analyst at Logicom, after starting out on a service desk at CDMA Services. I'm looking for a junior role in software engineering, security or DevOps, because that's the work I enjoy most. I don't claim to be an expert. I've built and documented real projects, I use AI tools like Claude Code to learn and build faster, and I'm honest about what I still have to learn.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   workModes: ['On-site / hybrid in Cyprus', 'Remote'],
@@ -78,6 +78,7 @@ export const pillars: Pillar[] = [
     icon: 'radar',
     description: 'Turning noisy logs into alerts a person can triage quickly.',
     points: [
+      'SOC alert monitoring, investigation and escalation for client environments',
       'ML anomaly detection on SSH auth and Apache logs',
       'Incident response playbooks following NIST SP 800-61',
       'MITRE ATT&CK mapping and blue-team endpoint scanning',
@@ -136,11 +137,23 @@ export interface TimelineItem {
 export const timeline: TimelineItem[] = [
   {
     kind: 'work',
+    title: 'Cybersecurity Analyst',
+    org: 'Logicom',
+    place: 'Nicosia, Cyprus',
+    period: 'Nov 2026 – Present',
+    current: true,
+    points: [
+      'Monitor and analyse security events, alerts and incidents in client environments, supporting the SOC with detection and response',
+      'Investigate alerts, identify potential threats and escalate incidents following established procedures',
+      'Support the implementation and configuration of cybersecurity solutions, and document incidents, findings and recommendations',
+    ],
+  },
+  {
+    kind: 'work',
     title: 'Service Desk Engineer',
     org: 'CDMA Services Ltd.',
     place: 'Nicosia, Cyprus',
-    period: 'Sep 2026 – Present',
-    current: true,
+    period: 'Sep 2026 – Oct 2026',
     points: [
       'Level 1 support for client users and environments: triage, troubleshooting, resolution and escalation',
       'Microsoft 365 and Entra ID administration: user accounts, licences and access',
