@@ -21,7 +21,7 @@ export default function ProjectsView() {
       <SectionHeader
         eyebrow="Portfolio"
         title="Projects"
-        subtitle="Only complete work is listed here: documented, tested and runnable. Research code is private, and I can walk you through it on request."
+        subtitle="Completed, documented projects across DevSecOps, cloud security, detection engineering and applied cryptography. Research code is private and available for review on request."
       />
 
       <div className="mb-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by category">

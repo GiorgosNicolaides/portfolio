@@ -8,8 +8,8 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader
           eyebrow="Toolbox"
-          title="Technologies I work with"
-          subtitle="Tools I've actually used and can talk about honestly. My projects also touch other technologies, like AWS and Kubernetes, which I'm still learning."
+          title="Technical skills"
+          subtitle="Platforms and technologies used in security operations and across my engineering projects."
         />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map(g => (

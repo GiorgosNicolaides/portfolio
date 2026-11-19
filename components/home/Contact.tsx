@@ -5,12 +5,12 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 pt-8">
       <div className="relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 via-panel to-sky/10 px-6 py-14 text-center sm:px-12">
-        <div className="eyebrow mb-4">Get in touch</div>
+        <div className="eyebrow mb-4">Contact</div>
         <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
-          Want to talk security, DevOps or AI automation?
+          Get in touch
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-text-muted">
-          I&apos;m always happy to chat about my projects, what I&apos;m working on and what I&apos;m learning.
+          For professional enquiries or questions about my work, contact me by email or on LinkedIn.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a href={`mailto:${profile.email}`} className="btn-primary">

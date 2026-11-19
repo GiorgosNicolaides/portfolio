@@ -60,7 +60,7 @@ export default function Experience() {
       <SectionHeader
         eyebrow="Background"
         title="Experience, education & certifications"
-        subtitle="Hands-on IT operations, a cybersecurity master's degree and vendor certifications, plus volunteering with a university developer community."
+        subtitle="Professional experience, academic background, vendor certifications and community involvement."
       />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr]">
