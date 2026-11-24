@@ -7,7 +7,7 @@ export const profile = {
   pitch:
     "Specialising in security operations: alert investigation, incident triage and the rollout of an agentic SOC on Google SecOps, backed by a foundation in DevSecOps, secure software engineering and applied cryptography.",
   summary:
-    "I am a Cybersecurity Analyst at Logicom Solutions, where I monitor and investigate security alerts across client environments in Google SecOps (SIEM & SOAR), working with telemetry from Microsoft Defender, CrowdStrike Falcon, Cisco XDR and Fortinet, Palo Alto and Cisco firewalls. I am also part of the team implementing an agentic SOC with Claude. I hold an MEng in Cybersecurity from the University of Limerick (thesis grade A2) and a BSc in Informatics & Telematics from Harokopio University (thesis graded 10/10). Alongside my role, I build and document security tooling covering CI/CD security gates, cloud configuration auditing, log-based threat detection and Zero Trust access control, and I research lightweight authentication protocols.",
+    "I am a Cybersecurity Analyst at Logicom Solutions, where I monitor and investigate security alerts across client environments in Google SecOps (SIEM & SOAR), working with telemetry from Microsoft Defender, CrowdStrike Falcon, Cisco XDR and Fortinet, Palo Alto and Cisco firewalls. I am also part of the team implementing an agentic SOC with Claude, and I hold the Google Cloud Professional Security Operations Engineer certification. I hold an MEng in Cybersecurity from the University of Limerick (thesis grade A2) and a BSc in Informatics & Telematics from Harokopio University (thesis graded 10/10). Alongside my role, I build and document security tooling covering CI/CD security gates, cloud configuration auditing, log-based threat detection and Zero Trust access control, and I research lightweight authentication protocols.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   languages: [
@@ -27,7 +27,7 @@ export const profile = {
 export const stats = [
   { value: '11', label: 'documented projects on GitHub' },
   { value: '10/10', label: 'BSc thesis grade' },
-  { value: '7', label: 'vendor certifications (Sophos, Kaseya)' },
+  { value: '8', label: 'industry certifications (Google Cloud, Sophos, Kaseya)' },
   { value: '1,807×', label: 'faster keygen vs RSA-2048 (LEO research)' },
 ]
 
@@ -79,6 +79,7 @@ export const pillars: Pillar[] = [
     description: 'Turning high-volume telemetry into actionable, well-triaged alerts.',
     points: [
       'SOC alert investigation and escalation in Google SecOps (SIEM & SOAR)',
+      'Google Cloud Certified Professional Security Operations Engineer',
       'ML anomaly detection on SSH auth and Apache logs',
       'Incident response playbooks following NIST SP 800-61',
       'MITRE ATT&CK mapping and blue-team endpoint scanning',
@@ -246,6 +247,14 @@ export interface Certification {
 }
 
 export const certifications: Certification[] = [
+  {
+    name: 'Google Cloud Certified Professional Security Operations Engineer',
+    issuer: 'Google Cloud (Credly)',
+    issued: 'Nov 2026',
+    expires: 'Nov 2028',
+    href: 'https://www.credly.com/badges/bf2db673-84cf-448f-9288-f442d5910187/public_url',
+    linkLabel: 'Verify',
+  },
   {
     name: 'Sophos Endpoint Architect',
     issuer: 'Sophos (Credly)',
