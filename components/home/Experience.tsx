@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { certifications, profile, timeline, volunteering, type TimelineItem } from '@/data/profile'
+import { certifications, profile, volunteering, type TimelineItem } from '@/data/profile'
 import { projects } from '@/data/projects'
 import SectionHeader from '@/components/ui/SectionHeader'
+import Roadmap from '@/components/home/Roadmap'
 import { ArrowRightIcon, BookIcon, BriefcaseIcon, CapIcon, ExternalIcon, ShieldIcon, UsersIcon } from '@/components/ui/Icons'
 import { cn } from '@/lib/utils'
 
@@ -59,17 +60,38 @@ export default function Experience() {
     <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
       <SectionHeader
         eyebrow="Background"
-        title="Experience, education & certifications"
-        subtitle="Professional experience, academic background, vendor certifications and community involvement."
+        title="Experience & education"
+        subtitle="Academic and professional milestones, followed by certifications, research and community involvement."
       />
 
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr]">
+      <Roadmap />
+
+      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          <Timeline items={timeline} />
-          <h3 className="mb-6 mt-14 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-accent">
+          <h3 className="mb-6 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-accent">
             <UsersIcon size={16} /> Volunteering
           </h3>
           <Timeline items={volunteering} />
+          <div className="mt-12">
+            <div className="card p-6">
+              <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
+                <BookIcon size={16} className="text-accent" /> Research
+              </div>
+              <div className="space-y-4">
+                {research.map(r => (
+                  <Link
+                    key={r.slug}
+                    href={`/projects/${r.slug}`}
+                    className="group block rounded-lg border border-border-subtle bg-background/50 p-4 transition-colors hover:border-accent/40"
+                  >
+                    <div className="font-mono text-2xl font-bold text-accent">{r.metrics[0].value}</div>
+                    <div className="text-[11px] text-text-muted">{r.metrics[0].label}</div>
+                    <div className="mt-2 text-sm font-medium text-text-primary group-hover:text-accent">{r.title}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-5">
@@ -98,25 +120,6 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="card p-6">
-            <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-text-primary">
-              <BookIcon size={16} className="text-accent" /> Research
-            </div>
-            <div className="space-y-4">
-              {research.map(r => (
-                <Link
-                  key={r.slug}
-                  href={`/projects/${r.slug}`}
-                  className="group block rounded-lg border border-border-subtle bg-background/50 p-4 transition-colors hover:border-accent/40"
-                >
-                  <div className="font-mono text-2xl font-bold text-accent">{r.metrics[0].value}</div>
-                  <div className="text-[11px] text-text-muted">{r.metrics[0].label}</div>
-                  <div className="mt-2 text-sm font-medium text-text-primary group-hover:text-accent">{r.title}</div>
-                </Link>
-              ))}
-            </div>
           </div>
 
           <div className="card p-6">
