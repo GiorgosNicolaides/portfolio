@@ -5,9 +5,9 @@ export const profile = {
   currentRole: { title: 'Cybersecurity Analyst', company: 'Logicom Solutions' },
   focusAreas: ['Security operations', 'Threat detection & response', 'DevSecOps', 'AI-driven automation'],
   pitch:
-    "Specialising in security operations: alert investigation, incident triage and the rollout of an agentic SOC on Google SecOps, backed by a foundation in DevSecOps, secure software engineering and applied cryptography.",
+    "Specialising in security operations: alert investigation and incident triage on Google SecOps, backed by a foundation in DevSecOps, secure software engineering and applied cryptography.",
   summary:
-    "I am a Cybersecurity Analyst at Logicom Solutions, where I monitor and investigate security alerts across client environments in Google SecOps (SIEM & SOAR), working with telemetry from Microsoft Defender, CrowdStrike Falcon, Cisco XDR and Fortinet, Palo Alto and Cisco firewalls. I am also part of the team implementing an agentic SOC with Claude, and I hold the Google Cloud Professional Security Operations Engineer certification. I hold an MEng in Cybersecurity from the University of Limerick (thesis grade A2) and a BSc in Informatics & Telematics from Harokopio University (thesis graded 10/10). Alongside my role, I build and document security tooling covering CI/CD security gates, cloud configuration auditing, log-based threat detection and Zero Trust access control, and I research lightweight authentication protocols.",
+    "I am a Cybersecurity Analyst at Logicom Solutions, where I monitor and investigate security alerts across client environments in Google SecOps (SIEM & SOAR), working with telemetry from Microsoft Defender, CrowdStrike Falcon, Cisco XDR and Fortinet, Palo Alto and Cisco firewalls. I hold the Google Cloud Professional Security Operations Engineer certification. I hold an MEng in Cybersecurity from the University of Limerick (thesis grade A2) and a BSc in Informatics & Telematics from Harokopio University (thesis graded 10/10). Alongside my role, I build and document security tooling covering CI/CD security gates, cloud configuration auditing, log-based threat detection and Zero Trust access control, and I research lightweight authentication protocols.",
   email: 'gnicolaides02@gmail.com',
   location: 'Nicosia, Cyprus',
   languages: [
@@ -53,9 +53,8 @@ export const pillars: Pillar[] = [
   {
     title: 'AI & Agentic Automation',
     icon: 'spark',
-    description: 'Applying AI agents to security operations and engineering, with human review of every output.',
+    description: 'Applying AI agents to engineering and automation, with human review of every output.',
     points: [
-      'Helping implement an agentic SOC with Claude in Google SecOps at work',
       'Agentic coding with Claude Code to build and test the tools on this site',
       'Reusable prompts, CLAUDE.md files, skills and security review checklists',
       'Claude and OpenAI API integrations',
@@ -126,7 +125,6 @@ export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] =
       'Jira Service Management',
       'Intelligence X',
       'Custom monitoring scripts',
-      'Agentic SOC with Claude',
       'Alert triage & escalation',
     ],
   },
@@ -135,7 +133,7 @@ export const skillGroups: { name: string; skills: string[]; wide?: boolean }[] =
     name: 'Security',
     skills: ['SIEM (ELK, Splunk)', 'MITRE ATT&CK', 'SAST (Semgrep, Bandit)', 'Dependency & secret scanning', 'Burp Suite', 'Nmap', 'Wireshark', 'GDPR'],
   },
-  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API', 'Agentic SOC (Claude in Google SecOps)'] },
+  { name: 'AI & Automation', skills: ['Claude Code', 'Claude API', 'OpenAI API'] },
   {
     name: 'IT Operations',
     skills: ['Autotask PSA', 'IT Glue', 'Datto RMM', 'Sophos', 'Networking (TCP/IP, DNS, VPN)'],
@@ -166,7 +164,6 @@ export const timeline: TimelineItem[] = [
       'Monitor and investigate security alerts in Google SecOps (SIEM & SOAR) across client environments, including Google Workspace and GCP, using Intelligence X for threat intelligence and custom scripts for monitoring',
       'Investigate detections from Microsoft Defender, CrowdStrike Falcon and Cisco XDR, and firewall events from Fortinet, Palo Alto and Cisco',
       'Triage and escalate incidents following established procedures, and document cases, findings and recommendations in Google SecOps SOAR and Jira Service Management',
-      'Part of the team implementing an agentic SOC in Google SecOps with Claude',
     ],
   },
   {
